@@ -1,0 +1,26 @@
+{
+  "name": "smartgorori_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "path": {
+    "assetsDir": "./views/assets/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-ejs": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
