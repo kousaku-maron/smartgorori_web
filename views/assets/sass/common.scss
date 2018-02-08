@@ -1,0 +1,88 @@
+@import 'compass';
+@import 'compass/reset';
+
+// $base-color: #918d43;
+// $sub-color: #d5a02e;
+// $accent-color: #c1541c;
+
+$base-color: #5f474e;
+$sub-color: #e5a663;
+$accent-color:  #34262a;
+
+$widthTab: 980px; //タブレット
+$widthSp: 640px; // スマホ
+
+header { 
+    background-color: $accent-color;
+	height: 70px;
+	width: 100%;
+}
+
+body {
+    background-color: $base-color;
+    width: 100%;
+}
+
+.margin-20px {
+    margin-top: 20px;
+    content: ' ';
+}
+
+.contents {
+    width: 90%;
+    margin: auto;
+    letter-spacing: -.4em;
+    
+    .content_25per {
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: top;
+        width: 25%;
+        height: 300px;
+
+        @media (max-width: $widthTab) and (min-width: $widthSp) {
+            width: 50%;
+        }
+
+        @media (max-width: $widthSp) {
+            width: 100%;
+        }
+
+        .tile {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 90%;
+            height: 90%;
+            transition: 1.0s;
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+            .image {
+                height: 70%;
+                background-position: center center;
+                background-image: url('../images/btc_test.jpeg');
+            }
+
+            .title {
+                font-size: 10px;
+                height: 25%;
+                padding: 7px 4px;
+                background-color: $sub-color;
+                overflow: hidden;
+            }
+
+            .date {
+                font-size: 5px;
+                height: 10%;
+                padding: 7px 4px;
+                background-color: $sub-color;
+            }
+        }
+    }
+}
+
+a {
+    @include link-colors(blue, red, pink);
+}

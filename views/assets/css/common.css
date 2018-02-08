@@ -1,0 +1,156 @@
+/* line 5, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 15, ../sass/common.scss */
+header {
+  background-color: #34262a;
+  height: 70px;
+  width: 100%;
+}
+
+/* line 21, ../sass/common.scss */
+body {
+  background-color: #5f474e;
+  width: 100%;
+}
+
+/* line 26, ../sass/common.scss */
+.margin-20px {
+  margin-top: 20px;
+  content: ' ';
+}
+
+/* line 31, ../sass/common.scss */
+.contents {
+  width: 90%;
+  margin: auto;
+  letter-spacing: -.4em;
+}
+/* line 36, ../sass/common.scss */
+.contents .content_25per {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  width: 25%;
+  height: 300px;
+}
+@media (max-width: 980px) and (min-width: 640px) {
+  /* line 36, ../sass/common.scss */
+  .contents .content_25per {
+    width: 50%;
+  }
+}
+@media (max-width: 640px) {
+  /* line 36, ../sass/common.scss */
+  .contents .content_25per {
+    width: 100%;
+  }
+}
+/* line 51, ../sass/common.scss */
+.contents .content_25per .tile {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 90%;
+  height: 90%;
+  transition: 1.0s;
+}
+/* line 58, ../sass/common.scss */
+.contents .content_25per .tile:hover {
+  opacity: 0.5;
+}
+/* line 62, ../sass/common.scss */
+.contents .content_25per .tile .image {
+  height: 70%;
+  background-position: center center;
+  background-image: url("../images/btc_test.jpeg");
+}
+/* line 68, ../sass/common.scss */
+.contents .content_25per .tile .title {
+  font-size: 10px;
+  height: 25%;
+  padding: 7px 4px;
+  background-color: #e5a663;
+  overflow: hidden;
+}
+/* line 76, ../sass/common.scss */
+.contents .content_25per .tile .date {
+  font-size: 5px;
+  height: 10%;
+  padding: 7px 4px;
+  background-color: #e5a663;
+}
+
+/* line 86, ../sass/common.scss */
+a {
+  color: blue;
+}
+/* line 24, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:hover {
+  color: red;
+}
+/* line 27, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:active {
+  color: pink;
+}
