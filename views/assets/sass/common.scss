@@ -1,31 +1,118 @@
 @import 'compass';
 @import 'compass/reset';
 
-// $base-color: #918d43;
-// $sub-color: #d5a02e;
-// $accent-color: #c1541c;
+@font-face {
+	font-family: 'Perfograma';
+	src: url('../font/perfograma/Perfograma.otf');
+}
 
-$base-color: #5f474e;
-$sub-color: #e5a663;
-$accent-color:  #34262a;
+$base-color: #34262a;
+$sub-color: #5f474e;
+$accent-color: #e5a663;
 
 $widthTab: 980px; //タブレット
 $widthSp: 640px; // スマホ
 
-header { 
-    background-color: $accent-color;
-	height: 70px;
-	width: 100%;
+a {
+    text-decoration: none; 
 }
+
+.font_perfograma {
+    font-family: Perfograma;
+}
+
+.margin_60px {
+    margin-top: 60px;
+}
+
+// ヘッダー
+// ----------------------------------------------
+header { 
+    background-color: $base-color;
+	height: 70px;
+    width: 100%;
+    border-bottom: 1px solid;
+    border-bottom-color: $sub-color;
+
+    @media (max-width: $widthSp) {
+        position: fixed;
+        top: 0px;
+        height: 90px;
+    }
+
+    .header-logo {
+        display: inline-block;
+        box-sizing: border-box;
+        margin-top: 25px;
+        margin-left: 15px;
+
+        @media (max-width: $widthSp) {
+            width: 100px;
+            margin-right: 50px;
+        }
+
+        p {
+            font-size: 20px;
+            // color:white;
+            color: $accent-color;
+    
+            @media (max-width: $widthTab) and (min-width: $widthSp) {
+                font-size: 15px;
+            }
+            
+            @media (max-width: $widthSp) {
+                font-size: 10px;
+            }
+
+            .maron_font {
+                font-size: 40px;
+        
+                @media (max-width: $widthSp) {
+                    font-size: 20px
+                }
+            }
+        }
+    }
+
+    .header-menu {
+        display: inline-block;
+        box-sizing: border-box;
+        float: right;
+
+        @media (max-width: $widthSp) {
+            width: calc(100% - 165px);
+        }
+
+        .menu_btn {
+            display: inline-block;
+            box-sizing: border-box;
+            font-size: 15px;
+            color: $accent-color;
+            margin-top: 30px;
+            margin-right: 15px;
+
+            @media (max-width: $widthSp) {
+                width:32%;
+                height: 60%;
+                padding-top: 20px;
+                margin-top: 20px;
+                margin-right: 0px;
+                text-align: center;
+                border: solid 1px $accent-color;
+            }
+        
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+
+// ----------------------------------------------
 
 body {
     background-color: $base-color;
     width: 100%;
-}
-
-.margin-20px {
-    margin-top: 20px;
-    content: ' ';
 }
 
 .contents {
@@ -33,12 +120,17 @@ body {
     margin: auto;
     letter-spacing: -.4em;
     
+    @media (max-width: $widthSp) {
+        margin-top: 90px;
+    }
+
     .content_25per {
         display: inline-block;
         box-sizing: border-box;
         vertical-align: top;
         width: 25%;
         height: 300px;
+        letter-spacing: 0em;
 
         @media (max-width: $widthTab) and (min-width: $widthSp) {
             width: 50%;
@@ -48,41 +140,56 @@ body {
             width: 100%;
         }
 
-        .tile {
-            display: inline-block;
-            box-sizing: border-box;
-            width: 90%;
-            height: 90%;
-            transition: 1.0s;
+        a {
 
-            &:hover {
-                opacity: 0.5;
-            }
+            .tile {
+                display: inline-block;
+                box-sizing: border-box;
+                color: $sub-color;
+                width: 90%;
+                height: 270px;
+                margin-top: 15px;
+                margin-left: 5%;
+                transition: 1.0s;
 
-            .image {
-                height: 70%;
-                background-position: center center;
-                background-image: url('../images/btc_test.jpeg');
-            }
+                &:hover {
+                    opacity: 0.6;
+                }
 
-            .title {
-                font-size: 10px;
-                height: 25%;
-                padding: 7px 4px;
-                background-color: $sub-color;
-                overflow: hidden;
-            }
+                .image {
+                    width:100%; 
+                    height: 200px;
+                    background-position: center center;
+                    background-size: cover;
+                }
 
-            .date {
-                font-size: 5px;
-                height: 10%;
-                padding: 7px 4px;
-                background-color: $sub-color;
+                .image_tile1, .image_tile2, .image_tile3, .image_tile4 {
+                    background-image: url('../images/btc_test.jpeg');
+                } 
+
+                .image_tile5 {
+                    background-image: url('../images/btc_test2.jpg');
+                }
+
+                .title {
+                    box-sizing: border-box;
+                    font-size: 15px;
+                    width:100%; 
+                    height: 50px;
+                    padding: 10px 10px 0px;
+                    background-color: $accent-color;
+                    overflow: hidden;
+                }
+
+                .date {
+                    box-sizing: border-box;
+                    font-size: 12px;
+                    width:100%; 
+                    height: 20px;
+                    padding: 5px 10px 10px;
+                    background-color: $accent-color;
+                }
             }
         }
     }
-}
-
-a {
-    @include link-colors(blue, red, pink);
 }

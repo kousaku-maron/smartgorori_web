@@ -7,7 +7,7 @@ module.exports = function(app) {
         layout: 'template',
         viewExt: 'html',
         cache: false,
-        debug: true
+        debug: false
     });
 
     return render;

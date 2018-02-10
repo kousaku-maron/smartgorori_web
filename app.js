@@ -13,4 +13,4 @@ app.use(serve(path.join(__dirname, '/views/assets')));
 console.log(path.join(__dirname, '/views/assets'));
 app.use(router(app, r));
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);

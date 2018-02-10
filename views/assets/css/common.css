@@ -63,94 +63,205 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 15, ../sass/common.scss */
+@font-face {
+  font-family: 'Perfograma';
+  src: url("../font/perfograma/Perfograma.otf");
+}
+/* line 16, ../sass/common.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 20, ../sass/common.scss */
+.font_perfograma {
+  font-family: Perfograma;
+}
+
+/* line 24, ../sass/common.scss */
+.margin_60px {
+  margin-top: 60px;
+}
+
+/* line 30, ../sass/common.scss */
 header {
   background-color: #34262a;
   height: 70px;
   width: 100%;
+  border-bottom: 1px solid;
+  border-bottom-color: #5f474e;
+}
+@media (max-width: 640px) {
+  /* line 30, ../sass/common.scss */
+  header {
+    position: fixed;
+    top: 0px;
+    height: 90px;
+  }
+}
+/* line 43, ../sass/common.scss */
+header .header-logo {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-top: 25px;
+  margin-left: 15px;
+}
+@media (max-width: 640px) {
+  /* line 43, ../sass/common.scss */
+  header .header-logo {
+    width: 100px;
+    margin-right: 50px;
+  }
+}
+/* line 54, ../sass/common.scss */
+header .header-logo p {
+  font-size: 20px;
+  color: #e5a663;
+}
+@media (max-width: 980px) and (min-width: 640px) {
+  /* line 54, ../sass/common.scss */
+  header .header-logo p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 640px) {
+  /* line 54, ../sass/common.scss */
+  header .header-logo p {
+    font-size: 10px;
+  }
+}
+/* line 67, ../sass/common.scss */
+header .header-logo p .maron_font {
+  font-size: 40px;
+}
+@media (max-width: 640px) {
+  /* line 67, ../sass/common.scss */
+  header .header-logo p .maron_font {
+    font-size: 20px;
+  }
+}
+/* line 77, ../sass/common.scss */
+header .header-menu {
+  display: inline-block;
+  box-sizing: border-box;
+  float: right;
+}
+@media (max-width: 640px) {
+  /* line 77, ../sass/common.scss */
+  header .header-menu {
+    width: calc(100% - 165px);
+  }
+}
+/* line 86, ../sass/common.scss */
+header .header-menu .menu_btn {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: #e5a663;
+  margin-top: 30px;
+  margin-right: 15px;
+}
+@media (max-width: 640px) {
+  /* line 86, ../sass/common.scss */
+  header .header-menu .menu_btn {
+    width: 32%;
+    height: 60%;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-right: 0px;
+    text-align: center;
+    border: solid 1px #e5a663;
+  }
+}
+/* line 104, ../sass/common.scss */
+header .header-menu .menu_btn:hover {
+  color: white;
 }
 
-/* line 21, ../sass/common.scss */
+/* line 113, ../sass/common.scss */
 body {
-  background-color: #5f474e;
+  background-color: #34262a;
   width: 100%;
 }
 
-/* line 26, ../sass/common.scss */
-.margin-20px {
-  margin-top: 20px;
-  content: ' ';
-}
-
-/* line 31, ../sass/common.scss */
+/* line 118, ../sass/common.scss */
 .contents {
   width: 90%;
   margin: auto;
   letter-spacing: -.4em;
 }
-/* line 36, ../sass/common.scss */
+@media (max-width: 640px) {
+  /* line 118, ../sass/common.scss */
+  .contents {
+    margin-top: 90px;
+  }
+}
+/* line 127, ../sass/common.scss */
 .contents .content_25per {
   display: inline-block;
   box-sizing: border-box;
   vertical-align: top;
   width: 25%;
   height: 300px;
+  letter-spacing: 0em;
 }
 @media (max-width: 980px) and (min-width: 640px) {
-  /* line 36, ../sass/common.scss */
+  /* line 127, ../sass/common.scss */
   .contents .content_25per {
     width: 50%;
   }
 }
 @media (max-width: 640px) {
-  /* line 36, ../sass/common.scss */
+  /* line 127, ../sass/common.scss */
   .contents .content_25per {
     width: 100%;
   }
 }
-/* line 51, ../sass/common.scss */
-.contents .content_25per .tile {
+/* line 145, ../sass/common.scss */
+.contents .content_25per a .tile {
   display: inline-block;
   box-sizing: border-box;
+  color: #5f474e;
   width: 90%;
-  height: 90%;
+  height: 270px;
+  margin-top: 15px;
+  margin-left: 5%;
   transition: 1.0s;
 }
-/* line 58, ../sass/common.scss */
-.contents .content_25per .tile:hover {
-  opacity: 0.5;
+/* line 155, ../sass/common.scss */
+.contents .content_25per a .tile:hover {
+  opacity: 0.6;
 }
-/* line 62, ../sass/common.scss */
-.contents .content_25per .tile .image {
-  height: 70%;
+/* line 159, ../sass/common.scss */
+.contents .content_25per a .tile .image {
+  width: 100%;
+  height: 200px;
   background-position: center center;
+  background-size: cover;
+}
+/* line 166, ../sass/common.scss */
+.contents .content_25per a .tile .image_tile1, .contents .content_25per a .tile .image_tile2, .contents .content_25per a .tile .image_tile3, .contents .content_25per a .tile .image_tile4 {
   background-image: url("../images/btc_test.jpeg");
 }
-/* line 68, ../sass/common.scss */
-.contents .content_25per .tile .title {
-  font-size: 10px;
-  height: 25%;
-  padding: 7px 4px;
+/* line 170, ../sass/common.scss */
+.contents .content_25per a .tile .image_tile5 {
+  background-image: url("../images/btc_test2.jpg");
+}
+/* line 174, ../sass/common.scss */
+.contents .content_25per a .tile .title {
+  box-sizing: border-box;
+  font-size: 15px;
+  width: 100%;
+  height: 50px;
+  padding: 10px 10px 0px;
   background-color: #e5a663;
   overflow: hidden;
 }
-/* line 76, ../sass/common.scss */
-.contents .content_25per .tile .date {
-  font-size: 5px;
-  height: 10%;
-  padding: 7px 4px;
+/* line 184, ../sass/common.scss */
+.contents .content_25per a .tile .date {
+  box-sizing: border-box;
+  font-size: 12px;
+  width: 100%;
+  height: 20px;
+  padding: 5px 10px 10px;
   background-color: #e5a663;
-}
-
-/* line 86, ../sass/common.scss */
-a {
-  color: blue;
-}
-/* line 24, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-a:hover {
-  color: red;
-}
-/* line 27, ../../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-a:active {
-  color: pink;
 }
