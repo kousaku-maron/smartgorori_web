@@ -89,6 +89,7 @@ header {
   width: 100%;
   border-bottom: 1px solid;
   border-bottom-color: #5f474e;
+  z-index: 10;
 }
 @media (max-width: 768px) {
   /* line 30, ../sass/common.scss */
@@ -98,7 +99,7 @@ header {
     height: 120px;
   }
 }
-/* line 43, ../sass/common.scss */
+/* line 44, ../sass/common.scss */
 header .header-logo {
   display: inline-block;
   box-sizing: border-box;
@@ -106,53 +107,53 @@ header .header-logo {
   margin-left: 15px;
 }
 @media (max-width: 768px) {
-  /* line 43, ../sass/common.scss */
+  /* line 44, ../sass/common.scss */
   header .header-logo {
     width: 100px;
-    margin-top: 35px;
-    margin-right: 50px;
+    margin-top: 45px;
+    margin-right: 25px;
   }
 }
-/* line 55, ../sass/common.scss */
+/* line 56, ../sass/common.scss */
 header .header-logo p {
   font-size: 20px;
   color: #e5a663;
 }
 @media (max-width: 1024px) and (min-width: 768px) {
-  /* line 55, ../sass/common.scss */
+  /* line 56, ../sass/common.scss */
   header .header-logo p {
     font-size: 15px;
   }
 }
 @media (max-width: 768px) {
-  /* line 55, ../sass/common.scss */
+  /* line 56, ../sass/common.scss */
   header .header-logo p {
     font-size: 10px;
   }
 }
-/* line 68, ../sass/common.scss */
+/* line 69, ../sass/common.scss */
 header .header-logo p .maron_font {
   font-size: 40px;
 }
 @media (max-width: 768px) {
-  /* line 68, ../sass/common.scss */
+  /* line 69, ../sass/common.scss */
   header .header-logo p .maron_font {
     font-size: 20px;
   }
 }
-/* line 78, ../sass/common.scss */
+/* line 79, ../sass/common.scss */
 header .header-menu {
   display: inline-block;
   box-sizing: border-box;
   float: right;
 }
 @media (max-width: 768px) {
-  /* line 78, ../sass/common.scss */
+  /* line 79, ../sass/common.scss */
   header .header-menu {
-    width: calc(100% - 165px);
+    width: calc(100% - 140px);
   }
 }
-/* line 87, ../sass/common.scss */
+/* line 88, ../sass/common.scss */
 header .header-menu .menu_btn {
   display: inline-block;
   box-sizing: border-box;
@@ -162,10 +163,11 @@ header .header-menu .menu_btn {
   margin-right: 15px;
 }
 @media (max-width: 768px) {
-  /* line 87, ../sass/common.scss */
+  /* line 88, ../sass/common.scss */
   header .header-menu .menu_btn {
-    width: 32%;
+    width: 30%;
     height: 60%;
+    font-size: 10px;
     padding-top: 30px;
     margin-top: 30px;
     margin-right: 0px;
@@ -173,30 +175,31 @@ header .header-menu .menu_btn {
     border: solid 1px #e5a663;
   }
 }
-/* line 105, ../sass/common.scss */
+/* line 107, ../sass/common.scss */
 header .header-menu .menu_btn:hover {
   color: white;
 }
 
-/* line 114, ../sass/common.scss */
+/* line 116, ../sass/common.scss */
 body {
   background-color: #34262a;
   width: 100%;
+  z-index: 5;
 }
 
-/* line 119, ../sass/common.scss */
+/* line 122, ../sass/common.scss */
 .contents {
   width: 90%;
   margin: auto;
   letter-spacing: -.4em;
 }
 @media (max-width: 768px) {
-  /* line 119, ../sass/common.scss */
+  /* line 122, ../sass/common.scss */
   .contents {
     margin-top: 90px;
   }
 }
-/* line 128, ../sass/common.scss */
+/* line 131, ../sass/common.scss */
 .contents .content_25per {
   display: inline-block;
   box-sizing: border-box;
@@ -206,18 +209,18 @@ body {
   letter-spacing: 0em;
 }
 @media (max-width: 1024px) and (min-width: 768px) {
-  /* line 128, ../sass/common.scss */
+  /* line 131, ../sass/common.scss */
   .contents .content_25per {
     width: 50%;
   }
 }
 @media (max-width: 768px) {
-  /* line 128, ../sass/common.scss */
+  /* line 131, ../sass/common.scss */
   .contents .content_25per {
     width: 100%;
   }
 }
-/* line 146, ../sass/common.scss */
+/* line 149, ../sass/common.scss */
 .contents .content_25per a .tile {
   display: inline-block;
   box-sizing: border-box;
@@ -228,26 +231,26 @@ body {
   margin-left: 5%;
   transition: 1.0s;
 }
-/* line 156, ../sass/common.scss */
+/* line 159, ../sass/common.scss */
 .contents .content_25per a .tile:hover {
   opacity: 0.6;
 }
-/* line 160, ../sass/common.scss */
+/* line 163, ../sass/common.scss */
 .contents .content_25per a .tile .image {
   width: 100%;
   height: 200px;
   background-position: center center;
   background-size: cover;
 }
-/* line 167, ../sass/common.scss */
+/* line 170, ../sass/common.scss */
 .contents .content_25per a .tile .image_tile1, .contents .content_25per a .tile .image_tile2, .contents .content_25per a .tile .image_tile3, .contents .content_25per a .tile .image_tile4 {
   background-image: url("../images/btc_test.jpeg");
 }
-/* line 171, ../sass/common.scss */
+/* line 174, ../sass/common.scss */
 .contents .content_25per a .tile .image_tile5 {
   background-image: url("../images/btc_test2.jpg");
 }
-/* line 175, ../sass/common.scss */
+/* line 178, ../sass/common.scss */
 .contents .content_25per a .tile .title {
   box-sizing: border-box;
   font-size: 15px;
@@ -257,7 +260,7 @@ body {
   background-color: #e5a663;
   overflow: hidden;
 }
-/* line 185, ../sass/common.scss */
+/* line 188, ../sass/common.scss */
 .contents .content_25per a .tile .date {
   box-sizing: border-box;
   font-size: 12px;
