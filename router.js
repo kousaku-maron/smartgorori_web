@@ -1,3 +1,4 @@
+const fs = require('fs');
 const Router = require('koa-router');
 const router = new Router();
 
@@ -9,8 +10,10 @@ module.exports = function(app, render) {
         })
 
         .get('/ccy', (ctx, next) => {
+            var json = JSON.parse(fs.readFileSync('views/assets/json/ccy.json', 'utf8')).articles;
             var title = 'MARON crypto currency blog | crypto currency';
-            return ctx.render('list_page', { title });
+            var list_title = '仮想通貨一覧';
+            return ctx.render('list_page', { title, list_title, json });
         })
 
         .get('/ccy/:id', (ctx, next) => {
@@ -20,8 +23,10 @@ module.exports = function(app, render) {
         })
         
         .get('/tech', (ctx, next) => {
+            var json = JSON.parse(fs.readFileSync('views/assets/json/tech.json', 'utf8')).articles;
             var title = 'MARON crypto currency blog | technology';
-            return ctx.render('list_page', { title });
+            var list_title = '技術一覧';
+            return ctx.render('list_page', { title, list_title, json });
         })
         
         .get('/tech/:id', (ctx, next) => {
@@ -31,8 +36,10 @@ module.exports = function(app, render) {
         })
 
         .get('/article', (ctx, next) => {
+            var json = JSON.parse(fs.readFileSync('views/assets/json/articles.json', 'utf8')).articles;
             var title = 'MARON crypto currency blog | article';
-            return ctx.render('list_page', { title });
+            var list_title = '記事一覧';
+            return ctx.render('list_page', { title, list_title, json });
         })
 
         .get('/article/:id', (ctx, next) => {

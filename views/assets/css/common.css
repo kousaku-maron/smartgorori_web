@@ -269,3 +269,56 @@ body {
   padding: 5px 10px 10px;
   background-color: #e5a663;
 }
+
+/* line 201, ../sass/common.scss */
+.article_container {
+  width: 90%;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  /* line 201, ../sass/common.scss */
+  .article_container {
+    width: 100%;
+    margin-top: 120px;
+  }
+}
+/* line 210, ../sass/common.scss */
+.article_container .title {
+  font-size: 20px;
+  color: #5f474e;
+  margin-bottom: 30px;
+}
+/* line 216, ../sass/common.scss */
+.article_container .article_inner {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* line 223, ../sass/common.scss */
+.list_inner {
+  width: 90%;
+  padding: 20px;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  /* line 223, ../sass/common.scss */
+  .list_inner {
+    width: 100%;
+    margin-top: 120px;
+  }
+}
+/* line 233, ../sass/common.scss */
+.list_inner .title {
+  font-size: 30px;
+  color: #e5a663;
+  margin-bottom: 25px;
+}
+/* line 239, ../sass/common.scss */
+.list_inner ul li {
+  margin-bottom: 10px;
+}
+/* line 242, ../sass/common.scss */
+.list_inner ul li a {
+  color: white;
+}

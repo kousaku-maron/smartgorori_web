@@ -1,0 +1,7 @@
+{
+    "articles": [
+        {"title": "テスト1", "date": "2018.2.10", "src": "/article/1"},
+        {"title": "テスト2", "date": "2018.2.10", "src": "/article/1"},
+        {"title": "test1", "date": "2018.2.10", "src": "/article/1"}
+    ]
+}

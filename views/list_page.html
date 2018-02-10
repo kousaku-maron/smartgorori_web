@@ -1,4 +1,11 @@
-<div>
-    <h3>list</h3>
-    <p>title: <%= title %></p>
+<div class='margin_60px'></div>
+<div class='list_inner'>
+    <h3 class='title'><%= list_title %></h3>
+    <ul>
+        <% for(var i=0; i<json.length; i++){ %>
+            <li><a href=<%= json[i].src %>>
+                <%= json[i].date %> <%= json[i].title %>
+            </a></li>
+        <% } %>
+    </ul>
 </div>

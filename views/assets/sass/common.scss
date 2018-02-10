@@ -123,7 +123,7 @@ body {
     width: 90%;
     margin: auto;
     letter-spacing: -.4em;
-    
+
     @media (max-width: $widthSp) {
         margin-top: 90px;
     }
@@ -194,6 +194,53 @@ body {
                     background-color: $accent-color;
                 }
             }
+        }
+    }
+}
+
+.article_container {
+    width: 90%;
+    margin: auto;
+
+    @media (max-width: $widthSp) {
+        width: 100%;
+        margin-top: 120px;
+    }
+
+    .title {
+        font-size: 20px;
+        color: $sub-color;
+        margin-bottom: 30px;
+    }
+
+    .article_inner {
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+    }
+}
+
+.list_inner {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+    
+    @media (max-width: $widthSp) {
+        width: 100%;
+        margin-top: 120px;
+    }
+
+    .title {
+        font-size: 30px;
+        color: $accent-color;
+        margin-bottom: 25px;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+    
+        a {
+            color: white; 
         }
     }
 }
