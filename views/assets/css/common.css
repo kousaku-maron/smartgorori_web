@@ -349,7 +349,7 @@ body {
 @media (max-width: 768px) {
   /* line 262, ../sass/common.scss */
   .notfound_container h3 {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 /* line 272, ../sass/common.scss */
