@@ -5,8 +5,9 @@ const router = new Router();
 module.exports = function(app, render) {
     router
         .get('/', (ctx, next) => {
+            var json = JSON.parse(fs.readFileSync('views/assets/json/tiles.json', 'utf8')).tiles;
             var title = 'MARON crypto currency blog | home';
-            return ctx.render('home', { title });
+            return ctx.render('home', { title, json });
         })
 
         .get('/ccy', (ctx, next) => {

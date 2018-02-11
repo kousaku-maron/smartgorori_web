@@ -167,11 +167,11 @@ body {
                     background-size: cover;
                 }
 
-                .image_tile1, .image_tile2, .image_tile3, .image_tile4 {
+                .image_tile1 {
                     background-image: url('../images/btc_test.jpeg');
                 } 
 
-                .image_tile5 {
+                .image_tile2 {
                     background-image: url('../images/btc_test2.jpg');
                 }
 
@@ -276,6 +276,6 @@ body {
         background-position: center center;
         background-repeat : no-repeat;
         background-image: url('../images/notfound_ghost.png');
-        opacity: 0.5;
+        opacity: 0.3;
     }
 }

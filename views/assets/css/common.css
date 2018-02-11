@@ -243,11 +243,11 @@ body {
   background-size: cover;
 }
 /* line 170, ../sass/common.scss */
-.contents .content_25per a .tile .image_tile1, .contents .content_25per a .tile .image_tile2, .contents .content_25per a .tile .image_tile3, .contents .content_25per a .tile .image_tile4 {
+.contents .content_25per a .tile .image_tile1 {
   background-image: url("../images/btc_test.jpeg");
 }
 /* line 174, ../sass/common.scss */
-.contents .content_25per a .tile .image_tile5 {
+.contents .content_25per a .tile .image_tile2 {
   background-image: url("../images/btc_test2.jpg");
 }
 /* line 178, ../sass/common.scss */
@@ -360,5 +360,5 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../images/notfound_ghost.png");
-  opacity: 0.5;
+  opacity: 0.3;
 }
