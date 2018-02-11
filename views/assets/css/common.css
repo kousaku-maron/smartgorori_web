@@ -299,6 +299,7 @@ body {
 
 /* line 225, ../sass/common.scss */
 .list_container {
+  position: relative;
   box-sizing: border-box;
   width: 90%;
   padding: 20px;
@@ -311,22 +312,59 @@ body {
     margin-top: 120px;
   }
 }
-/* line 236, ../sass/common.scss */
+/* line 237, ../sass/common.scss */
+.list_container .image {
+  min-height: 400px;
+  background-image: url("../images/list_bitcoin.png");
+  background-size: 400px;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  /* line 237, ../sass/common.scss */
+  .list_container .image {
+    min-height: 250px;
+    background-size: 250px;
+  }
+}
+/* line 252, ../sass/common.scss */
 .list_container .title {
+  position: absolute;
+  top: 0px;
   font-size: 30px;
   color: #e5a663;
   margin-bottom: 25px;
+  z-index: 5;
 }
-/* line 242, ../sass/common.scss */
+@media (max-width: 768px) {
+  /* line 252, ../sass/common.scss */
+  .list_container .title {
+    top: 40px;
+  }
+}
+/* line 265, ../sass/common.scss */
+.list_container ul {
+  position: absolute;
+  top: 55px;
+  z-index: 5;
+}
+@media (max-width: 768px) {
+  /* line 265, ../sass/common.scss */
+  .list_container ul {
+    top: 95px;
+  }
+}
+/* line 274, ../sass/common.scss */
 .list_container ul li {
   margin-bottom: 10px;
 }
-/* line 245, ../sass/common.scss */
+/* line 277, ../sass/common.scss */
 .list_container ul li a {
   color: white;
 }
 
-/* line 251, ../sass/common.scss */
+/* line 284, ../sass/common.scss */
 .notfound_container {
   box-sizing: border-box;
   width: 90%;
@@ -334,25 +372,25 @@ body {
   margin: auto;
 }
 @media (max-width: 768px) {
-  /* line 251, ../sass/common.scss */
+  /* line 284, ../sass/common.scss */
   .notfound_container {
     width: 100%;
     margin-top: 120px;
   }
 }
-/* line 262, ../sass/common.scss */
+/* line 295, ../sass/common.scss */
 .notfound_container h3 {
   font-size: 30px;
   color: white;
   margin-bottom: 50px;
 }
 @media (max-width: 768px) {
-  /* line 262, ../sass/common.scss */
+  /* line 295, ../sass/common.scss */
   .notfound_container h3 {
     font-size: 15px;
   }
 }
-/* line 272, ../sass/common.scss */
+/* line 305, ../sass/common.scss */
 .notfound_container .image {
   width: 100%;
   height: 300px;

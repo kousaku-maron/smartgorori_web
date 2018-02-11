@@ -223,27 +223,60 @@ body {
 }
 
 .list_container {
+    position: relative;
     box-sizing: border-box;
     width: 90%;
     padding: 20px;
     margin: auto;
-    
+
     @media (max-width: $widthSp) {
         width: 100%;
         margin-top: 120px;
     }
 
+    .image {
+        min-height: 400px;
+        // transform: rotate(-30deg);
+        background-image: url('../images/list_bitcoin.png');
+        background-size: 400px;
+        background-repeat : no-repeat;
+        opacity: 0.3;
+        z-index: 1;
+        
+        @media (max-width: $widthSp) {
+            min-height: 250px;
+            background-size: 250px;
+        }
+    }
+
     .title {
+        position: absolute;
+        top: 0px;
         font-size: 30px;
         color: $accent-color;
         margin-bottom: 25px;
+        z-index: 5;
+
+        @media (max-width: $widthSp) {
+            top: 40px;
+        }
     }
 
-    ul li {
-        margin-bottom: 10px;
-    
-        a {
-            color: white; 
+    ul {
+        position: absolute;
+        top: 55px;
+        z-index: 5;
+
+        @media (max-width: $widthSp) {
+            top: 95px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        
+            a {
+                color: white; 
+            }
         }
     }
 }
