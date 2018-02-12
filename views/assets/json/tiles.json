@@ -1,8 +1,5 @@
 {
     "tiles": [
-        {"title": "Not Found TEST", "date": "2018.2.10", "src": "/article/10", "image_css": "image_tile1"},
-        {"title": "Article TEST", "date": "2018.2.10", "src": "/article/1", "image_css": "image_tile1"},
-        {"title": "Tech TEST", "date": "2018.2.10", "src": "/tech/1", "image_css": "image_tile2"},
-        {"title": "CCY TEST", "date": "2018.2.10", "src": "/ccy/1", "image_css": "image_tile2"}
+        {"title": "VIBEHub(VIBE)とは", "date": "2018.2.12", "src": "/ccy/1", "image_css": "image_tile1"}
     ]
 }

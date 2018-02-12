@@ -25,6 +25,10 @@ a {
     margin-top: 60px;
 }
 
+.margin_bottom_50px {
+    margin-bottom: 100px;
+}
+
 // ヘッダー
 // ----------------------------------------------
 header { 
@@ -168,11 +172,11 @@ body {
                 }
 
                 .image_tile1 {
-                    background-image: url('../images/btc_test.jpeg');
+                    background-image: url('../images/tile/vibe.jpeg');
                 } 
 
-                .image_tile2 {
-                    background-image: url('../images/btc_test2.jpg');
+                .image_tile0 {
+                    background-image: url('../images/btc_test.jpg');
                 }
 
                 .title {
@@ -195,30 +199,6 @@ body {
                 }
             }
         }
-    }
-}
-
-.article_container {
-    box-sizing: border-box;
-    width: 90%;
-    margin: auto;
-
-    @media (max-width: $widthSp) {
-        width: 100%;
-        margin-top: 120px;
-    }
-
-    .title {
-        font-size: 20px;
-        color: $sub-color;
-        margin-bottom: 30px;
-    }
-
-    .article_inner {
-        box-sizing: border-box;
-        width: 100%;
-        background-color: white;
-        padding: 20px;
     }
 }
 
@@ -259,6 +239,19 @@ body {
 
         @media (max-width: $widthSp) {
             top: 40px;
+        }
+    }
+
+    .message {
+        font-size: 30px;
+        color: white;
+        position: absolute;
+        top: 55px;
+        z-index: 5;
+
+        @media (max-width: $widthSp) {
+            top: 95px;
+            font-size: 15px;
         }
     }
 
@@ -310,5 +303,53 @@ body {
         background-repeat : no-repeat;
         background-image: url('../images/notfound_ghost.png');
         opacity: 0.3;
+    }
+}
+
+.article_container {
+    box-sizing: border-box;
+    width: 90%;
+    margin: auto;
+
+    @media (max-width: $widthSp) {
+        margin-top: 150px;
+    }
+
+    .article_wrapper {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100%;
+        background-color: $base-color;
+        color: white;
+    
+        h3 {
+            font-size: 60px;
+            color: $accent-color;
+            font-weight: bold;
+            margin-bottom: 50px;
+
+            @media (max-width: $widthSp) {
+                font-size: 40px;
+            }
+        }
+        
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 40px;
+
+            @media (max-width: $widthSp) {
+                font-size: 30px;
+            }
+        }
+    
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+
+            @media (max-width: $widthSp) {
+                font-size: 15px;
+            }
+        }
     }
 }
