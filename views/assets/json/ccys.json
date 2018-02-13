@@ -1,5 +1,5 @@
 {
     "articles": [
-        {"title": "VIBEHub(VIBE)とは", "date": "2018.2.12", "src": "/ccy/1"}
+        {"title": "VIBEHub(VIBE)とは", "description": "VR系仮想通貨です", "image": "/images/tile/vibe.jpeg", "date": "2018.2.12", "src": "/ccy/1", "page": "/ccys/ccy1"}
     ]
 }
