@@ -1,5 +1,22 @@
 {
+    "list": {
+        "meta": {
+            "title": "MARON crypto currency blog | 仮想通貨一覧",
+            "description": "仮想通貨一覧",
+            "url": "/ccy"
+        }
+    },
+    
     "articles": [
-        {"title": "VIBEHub(VIBE)とは", "date": "2018.2.12", "src": "/ccy/1", "page": "/ccys/ccy1"}
+        {
+            "title": "VIBEHub(VIBE)とは", 
+            "date": "2018.2.14", 
+            "src": "/ccys/ccy1",
+            "meta": {
+                "title": "MARON crypto currency blog | VIBEHub(VIBE)とは",
+                "description": "VRプラットフォーム",
+                "url": "/ccy/1"
+            }
+        }  
     ]
 }

@@ -1,14 +1,76 @@
 <html>
   <head>
-    <title><%= title %></title>
-    <%- include('./partial/meta_data') %>
+    <title><%= meta.title %></title>
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@maronBlockchain" />
+    <meta name="twitter:image" content="https://www.smartgorori.com/images/icon.JPG" />
+    
+    <meta property="og:url" content="<%= meta.url %>" />
+    <meta property="og:title" content="<%= meta.title %>" />
+    <meta property="og:description" content="<%= meta.description %>" />
+    <meta property="og:image" content="https://www.smartgorori.com/images/icon.JPG" />
+    
+    <!-- style -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/common.css">
 
-    <%- include('./partial/onesignal') -%>
+    <!-- OneSignal -->
+    <link rel="manifest" href="/json/manifest.json">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+            appId: "0002f58a-080b-4709-97d4-9378f15dfc6e",
+            subdomainName: 'PushAPI',
+            notifyButton: {
+                enable: true,
+                colors: {
+                    'circle.background': '#5f474e',
+                    'circle.foreground': '#e5a663',
+                    'badge.background': '#5f474e',
+                    'badge.foreground': '#e5a663',
+                    'badge.bordercolor': '#5f474e',
+                    'pulse.color': 'white',
+                    'dialog.button.background.hovering': 'rgb(77, 101, 113)',
+                    'dialog.button.background.active': 'rgb(70, 92, 103)',
+                    'dialog.button.background': 'rgb(84,110,123)',
+                    'dialog.button.foreground': 'white'
+                },
+            },
+
+            // Your other init options here
+            promptOptions: {
+            siteName: 'MARON crypto currency blog',
+            actionMessage: "最新の記事を通知してもいいですか？",
+            exampleNotificationTitle: 'MARON crypto currency blog',
+            exampleNotificationMessage: '最新の記事を通知',
+            exampleNotificationCaption: 'いつでも通知は解除できます',
+            acceptButtonText: "OK",
+            cancelButtonText: "CANCEL"
+            }
+        }]);
+    </script>
   </head>
   <body>
-    <%- include('./partial/header') -%>
+    <header>
+      <div class='header-logo'>
+          <a href='/'>
+              <p class='font_perfograma'>
+                  <span class='maron_font'>MARON</span> crpto currency blog
+              </p>
+          </a>
+      </div>
+  
+      <div class='header-menu'>
+          <a href='/ccy' class='menu_btn'>仮想通貨情報</a>
+          <a href='/tech' class='menu_btn'>技術情報</a>
+          <a href='/article' class='menu_btn'>記事</a>
+      </div>
+  </header>
+
     <%- body %>
+
   </body>
 </html>

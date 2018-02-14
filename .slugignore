@@ -1,0 +1,6 @@
+README.md
+gulpfile.js
+.gitignore
+views/assets/sass/
+views/assets/.sass_cache/
+views/assets/config.rb

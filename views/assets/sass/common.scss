@@ -25,7 +25,15 @@ a {
     margin-top: 60px;
 }
 
+.margin_bottom_25px {
+    margin-bottom: 25px;
+}
+
 .margin_bottom_50px {
+    margin-bottom: 50px;
+}
+
+.margin_bottom_100px {
     margin-bottom: 100px;
 }
 
@@ -349,6 +357,25 @@ body {
 
             @media (max-width: $widthSp) {
                 font-size: 15px;
+            }
+        }
+
+        .img_60per {
+            width: 60%;
+            margin-left: 20%;
+
+            @media (max-width: $widthSp) {
+                width: 100%;
+                margin-left: 0px;
+            }
+        }
+
+        .exchange {
+            background-color: white;
+            width: 30%;
+
+            @media (max-width: $widthSp) {
+                width: 100%;
             }
         }
     }

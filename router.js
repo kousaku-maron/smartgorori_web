@@ -2,91 +2,98 @@ const fs = require('fs');
 const Router = require('koa-router');
 const router = new Router();
 
-function notFound(){
-    var title = 'MARON crypto currency blog | Not Found';
-    var data = {title: 'Not Found', src: '/notfound'};
-    return ctx.render('notfound', { title, data });
-}
+// JSON FILE
+// -------------------------------------------------------------------------------------------
+const homeJson = JSON.parse(fs.readFileSync('views/assets/json/home.json', 'utf8'));
+const ccyJson = JSON.parse(fs.readFileSync('views/assets/json/ccys.json', 'utf8'));;
+const techJson = JSON.parse(fs.readFileSync('views/assets/json/techs.json', 'utf8'));
+const articleJson = JSON.parse(fs.readFileSync('views/assets/json/articles.json', 'utf8'));
+const errorJson = JSON.parse(fs.readFileSync('views/assets/json/error.json', 'utf8'));
+// -------------------------------------------------------------------------------------------
 
 module.exports = function(app, render) {
     router
         .get('/', (ctx, next) => {
-            var json = JSON.parse(fs.readFileSync('views/assets/json/tiles.json', 'utf8')).tiles;
-            var home = 'ホーム';
-            var title = 'MARON crypto currency blog | ' + home;
-            var data = {title: home, src: '/'};
-            return ctx.render('home', { title, json, data });
+            var json = homeJson;
+            var meta = json.meta;
+            var tiles = json.tiles;
+            return ctx.render('home', { meta, tiles });
         })
 
         .get('/ccy', (ctx, next) => {
-            var json = JSON.parse(fs.readFileSync('views/assets/json/ccys.json', 'utf8')).articles;
-            var list_title = '仮想通貨一覧';
-            var title = 'MARON crypto currency blog | ' + list_title;
-            var data = {title: list_title, src: '/ccy'};
-            return ctx.render('list_page', { title, data, json });
+            var json = ccyJson;
+            var meta = json.list.meta;
+            var articles = json.articles;
+            return ctx.render('list', { meta, articles });
         })
 
         .get('/ccy/:id', (ctx, next) => {
-            var json = JSON.parse(fs.readFileSync('views/assets/json/ccys.json', 'utf8')).articles;
+            var json = ccyJson;
             var id = ctx.params.id;
             
-            if(id <= json.length){
-                var data = json[id-1]
-                var title = 'MARON crypto currency blog | ' + data.title;
-                return ctx.render('article_page', { title, data });
+            if(id <= json.articles.length){
+                var article = json.articles[id-1];
+                var meta = article.meta;
+                return ctx.render('article', { meta, article });
             }
             else{
-                notFound();
+                var json = errorJson;
+                var meta = json.meta;
+                return ctx.render('error', { meta });
             }
         })
         
         .get('/tech', (ctx, next) => {
-            var json = JSON.parse(fs.readFileSync('views/assets/json/techs.json', 'utf8')).articles;
-            var list_title = '技術一覧';
-            var title = 'MARON crypto currency blog | ' + list_title;
-            var data = {title: list_title, src: '/tech'};
-            return ctx.render('list_page', { title, data, json });
+            var json = techJson;
+            var meta = json.list.meta;
+            var articles = json.articles;
+            return ctx.render('list', { meta, articles });
         })
         
         .get('/tech/:id', (ctx, next) => {
-            var json = JSON.parse(fs.readFileSync('views/assets/json/techs.json', 'utf8')).articles;
+            var json = JSON.parse(fs.readFileSync(techJson, 'utf8'));
             var id = ctx.params.id;
             
-            if(id <= json.length){
-                var data = json[id-1]
-                var title = 'MARON crypto currency blog | ' + data.title;
-                return ctx.render('article_page', { title, data });
+            if(id <= json.articles.length){
+                var article = json.articles[id-1];
+                var meta = article.meta;
+                return ctx.render('article', { meta, article });
             }
             else{
-                notFound();
+                var json = errorJson;
+                var meta = json.meta;
+                return ctx.render('error', { meta });
             }
         })
 
         .get('/article', (ctx, next) => {
-            var json = JSON.parse(fs.readFileSync('views/assets/json/articles.json', 'utf8')).articles;
-            var list_title = '記事一覧';
-            var title = 'MARON crypto currency blog | ' + list_title;
-            var data = {title: list_title, src: '/article'};
-            return ctx.render('list_page', { title, list_title, json, data });
+            var json = articleJson;
+            var meta = json.list.meta;
+            var articles = json.articles;
+            return ctx.render('list', { meta, articles });
         })
 
         .get('/article/:id', (ctx, next) => {
-            var json = JSON.parse(fs.readFileSync('views/assets/json/articles.json', 'utf8')).articles;
+            var json = articleJson;
             var id = ctx.params.id;
         
-            if(id <= json.length){
-                var data = json[id-1]
-                var title = 'MARON crypto currency blog | ' + data.title;
-                return ctx.render('article_page', { title, data });
+            if(id <= json.articles.length){
+                var article = json.articles[id-1]
+                var meta = article.meta;
+                return ctx.render('article', { meta, article });
             }
             else{
-                notFound();
+                var json = errorJson;
+                var meta = json.meta;
+                return ctx.render('error', { meta });
             }
         })
 
         .get('*', (ctx, next) => {
-            notFound();
-        });
+            var json = errorJson;
+            var meta = json.meta;
+            return ctx.render('error', { meta });
+        })
 
     return router.routes();
     

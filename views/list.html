@@ -1,0 +1,18 @@
+<div class='margin_60px'></div>
+<div class='list_container'>
+    <h3 class='title'><%= meta.description %></h3>
+
+    <% if (articles.length == 0) { %>
+        <p class='message'>準備中です</p>
+    <% } %>
+
+    <ul>
+        <% for(var i=0; i<articles.length; i++){ %>
+            <li><a href=<%= articles[i].meta.url %>>
+                <%= articles[i].date %> <%= articles[i].title %>
+            </a></li>
+        <% } %>
+    </ul>
+    
+    <div class='image'></div>
+</div>

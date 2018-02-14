@@ -1,3 +1,11 @@
 {
+    "list": {
+        "meta": {
+            "title": "MARON crypto currency blog | 技術一覧",
+            "description": "技術一覧",
+            "url": "/tech"
+        }
+    },
+    
     "articles": []
 }

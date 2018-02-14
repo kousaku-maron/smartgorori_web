@@ -1,0 +1,11 @@
+{
+    "meta": {
+        "title": "MARON crypto currency blog | ホーム",
+        "description": "ホーム",
+        "url": "/"
+    },
+
+    "tiles": [
+        {"title": "VIBEHub(VIBE)とは", "date": "2018.2.14", "url": "/ccy/1", "image_class": "image_tile1"}
+    ]
+}
