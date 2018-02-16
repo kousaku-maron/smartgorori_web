@@ -73,31 +73,46 @@ a {
 }
 
 /* line 20, ../sass/common.scss */
+a:link {
+  color: #e5a663;
+}
+
+/* line 24, ../sass/common.scss */
+a:visited {
+  color: #5f474e;
+}
+
+/* line 28, ../sass/common.scss */
 .font_perfograma {
   font-family: Perfograma;
 }
 
-/* line 24, ../sass/common.scss */
+/* line 32, ../sass/common.scss */
 .margin_60px {
   margin-top: 60px;
 }
 
-/* line 28, ../sass/common.scss */
+/* line 36, ../sass/common.scss */
 .margin_bottom_25px {
   margin-bottom: 25px;
 }
 
-/* line 32, ../sass/common.scss */
+/* line 40, ../sass/common.scss */
 .margin_bottom_50px {
   margin-bottom: 50px;
 }
 
-/* line 36, ../sass/common.scss */
+/* line 44, ../sass/common.scss */
 .margin_bottom_100px {
   margin-bottom: 100px;
 }
 
-/* line 42, ../sass/common.scss */
+/* line 48, ../sass/common.scss */
+.padding_40px {
+  padding: 40px;
+}
+
+/* line 54, ../sass/common.scss */
 header {
   background-color: #34262a;
   height: 70px;
@@ -107,14 +122,14 @@ header {
   z-index: 10;
 }
 @media (max-width: 768px) {
-  /* line 42, ../sass/common.scss */
+  /* line 54, ../sass/common.scss */
   header {
     position: fixed;
     top: 0px;
     height: 120px;
   }
 }
-/* line 56, ../sass/common.scss */
+/* line 68, ../sass/common.scss */
 header .header-logo {
   display: inline-block;
   box-sizing: border-box;
@@ -122,53 +137,53 @@ header .header-logo {
   margin-left: 15px;
 }
 @media (max-width: 768px) {
-  /* line 56, ../sass/common.scss */
+  /* line 68, ../sass/common.scss */
   header .header-logo {
     width: 100px;
     margin-top: 45px;
     margin-right: 25px;
   }
 }
-/* line 68, ../sass/common.scss */
+/* line 80, ../sass/common.scss */
 header .header-logo p {
   font-size: 20px;
   color: #e5a663;
 }
 @media (max-width: 1024px) and (min-width: 768px) {
-  /* line 68, ../sass/common.scss */
+  /* line 80, ../sass/common.scss */
   header .header-logo p {
     font-size: 15px;
   }
 }
 @media (max-width: 768px) {
-  /* line 68, ../sass/common.scss */
+  /* line 80, ../sass/common.scss */
   header .header-logo p {
     font-size: 10px;
   }
 }
-/* line 81, ../sass/common.scss */
+/* line 93, ../sass/common.scss */
 header .header-logo p .maron_font {
   font-size: 40px;
 }
 @media (max-width: 768px) {
-  /* line 81, ../sass/common.scss */
+  /* line 93, ../sass/common.scss */
   header .header-logo p .maron_font {
     font-size: 20px;
   }
 }
-/* line 91, ../sass/common.scss */
+/* line 103, ../sass/common.scss */
 header .header-menu {
   display: inline-block;
   box-sizing: border-box;
   float: right;
 }
 @media (max-width: 768px) {
-  /* line 91, ../sass/common.scss */
+  /* line 103, ../sass/common.scss */
   header .header-menu {
     width: calc(100% - 140px);
   }
 }
-/* line 100, ../sass/common.scss */
+/* line 112, ../sass/common.scss */
 header .header-menu .menu_btn {
   display: inline-block;
   box-sizing: border-box;
@@ -178,7 +193,7 @@ header .header-menu .menu_btn {
   margin-right: 15px;
 }
 @media (max-width: 768px) {
-  /* line 100, ../sass/common.scss */
+  /* line 112, ../sass/common.scss */
   header .header-menu .menu_btn {
     width: 30%;
     height: 60%;
@@ -190,31 +205,31 @@ header .header-menu .menu_btn {
     border: solid 1px #e5a663;
   }
 }
-/* line 119, ../sass/common.scss */
+/* line 131, ../sass/common.scss */
 header .header-menu .menu_btn:hover {
   color: white;
 }
 
-/* line 128, ../sass/common.scss */
+/* line 140, ../sass/common.scss */
 body {
   background-color: #34262a;
   width: 100%;
   z-index: 5;
 }
 
-/* line 134, ../sass/common.scss */
+/* line 146, ../sass/common.scss */
 .contents {
   width: 90%;
   margin: auto;
   letter-spacing: -.4em;
 }
 @media (max-width: 768px) {
-  /* line 134, ../sass/common.scss */
+  /* line 146, ../sass/common.scss */
   .contents {
     margin-top: 120px;
   }
 }
-/* line 143, ../sass/common.scss */
+/* line 155, ../sass/common.scss */
 .contents .content_25per {
   display: inline-block;
   box-sizing: border-box;
@@ -224,18 +239,18 @@ body {
   letter-spacing: 0em;
 }
 @media (max-width: 1024px) and (min-width: 768px) {
-  /* line 143, ../sass/common.scss */
+  /* line 155, ../sass/common.scss */
   .contents .content_25per {
     width: 50%;
   }
 }
 @media (max-width: 768px) {
-  /* line 143, ../sass/common.scss */
+  /* line 155, ../sass/common.scss */
   .contents .content_25per {
     width: 100%;
   }
 }
-/* line 161, ../sass/common.scss */
+/* line 173, ../sass/common.scss */
 .contents .content_25per a .tile {
   display: inline-block;
   box-sizing: border-box;
@@ -246,26 +261,30 @@ body {
   margin-left: 5%;
   transition: 1.0s;
 }
-/* line 171, ../sass/common.scss */
+/* line 183, ../sass/common.scss */
 .contents .content_25per a .tile:hover {
   opacity: 0.6;
 }
-/* line 175, ../sass/common.scss */
+/* line 187, ../sass/common.scss */
 .contents .content_25per a .tile .image {
   width: 100%;
   height: 200px;
   background-position: center center;
   background-size: cover;
 }
-/* line 182, ../sass/common.scss */
-.contents .content_25per a .tile .image_tile1 {
-  background-image: url("../images/tile/vibe.jpeg");
-}
-/* line 186, ../sass/common.scss */
+/* line 194, ../sass/common.scss */
 .contents .content_25per a .tile .image_tile0 {
   background-image: url("../images/btc_test.jpg");
 }
-/* line 190, ../sass/common.scss */
+/* line 198, ../sass/common.scss */
+.contents .content_25per a .tile .image_tile1 {
+  background-image: url("../images/tile/vibe.jpeg");
+}
+/* line 202, ../sass/common.scss */
+.contents .content_25per a .tile .image_tile2 {
+  background-image: url("../images/tron/top.png");
+}
+/* line 206, ../sass/common.scss */
 .contents .content_25per a .tile .title {
   box-sizing: border-box;
   font-size: 15px;
@@ -275,7 +294,7 @@ body {
   background-color: #e5a663;
   overflow: hidden;
 }
-/* line 200, ../sass/common.scss */
+/* line 216, ../sass/common.scss */
 .contents .content_25per a .tile .date {
   box-sizing: border-box;
   font-size: 12px;
@@ -285,7 +304,7 @@ body {
   background-color: #e5a663;
 }
 
-/* line 213, ../sass/common.scss */
+/* line 229, ../sass/common.scss */
 .list_container {
   position: relative;
   box-sizing: border-box;
@@ -294,13 +313,13 @@ body {
   margin: auto;
 }
 @media (max-width: 768px) {
-  /* line 213, ../sass/common.scss */
+  /* line 229, ../sass/common.scss */
   .list_container {
     width: 100%;
     margin-top: 120px;
   }
 }
-/* line 225, ../sass/common.scss */
+/* line 241, ../sass/common.scss */
 .list_container .image {
   min-height: 400px;
   background-image: url("../images/list_bitcoin.png");
@@ -310,13 +329,13 @@ body {
   z-index: 1;
 }
 @media (max-width: 768px) {
-  /* line 225, ../sass/common.scss */
+  /* line 241, ../sass/common.scss */
   .list_container .image {
     min-height: 250px;
     background-size: 250px;
   }
 }
-/* line 240, ../sass/common.scss */
+/* line 256, ../sass/common.scss */
 .list_container .title {
   position: absolute;
   top: 0px;
@@ -326,12 +345,12 @@ body {
   z-index: 5;
 }
 @media (max-width: 768px) {
-  /* line 240, ../sass/common.scss */
+  /* line 256, ../sass/common.scss */
   .list_container .title {
     top: 40px;
   }
 }
-/* line 253, ../sass/common.scss */
+/* line 269, ../sass/common.scss */
 .list_container .message {
   font-size: 30px;
   color: white;
@@ -340,34 +359,34 @@ body {
   z-index: 5;
 }
 @media (max-width: 768px) {
-  /* line 253, ../sass/common.scss */
+  /* line 269, ../sass/common.scss */
   .list_container .message {
     top: 95px;
     font-size: 15px;
   }
 }
-/* line 266, ../sass/common.scss */
+/* line 282, ../sass/common.scss */
 .list_container ul {
   position: absolute;
   top: 55px;
   z-index: 5;
 }
 @media (max-width: 768px) {
-  /* line 266, ../sass/common.scss */
+  /* line 282, ../sass/common.scss */
   .list_container ul {
     top: 95px;
   }
 }
-/* line 275, ../sass/common.scss */
+/* line 291, ../sass/common.scss */
 .list_container ul li {
   margin-bottom: 10px;
 }
-/* line 278, ../sass/common.scss */
+/* line 294, ../sass/common.scss */
 .list_container ul li a {
   color: white;
 }
 
-/* line 285, ../sass/common.scss */
+/* line 301, ../sass/common.scss */
 .notfound_container {
   box-sizing: border-box;
   width: 90%;
@@ -375,25 +394,25 @@ body {
   margin: auto;
 }
 @media (max-width: 768px) {
-  /* line 285, ../sass/common.scss */
+  /* line 301, ../sass/common.scss */
   .notfound_container {
     width: 100%;
     margin-top: 120px;
   }
 }
-/* line 296, ../sass/common.scss */
+/* line 312, ../sass/common.scss */
 .notfound_container h3 {
   font-size: 30px;
   color: white;
   margin-bottom: 50px;
 }
 @media (max-width: 768px) {
-  /* line 296, ../sass/common.scss */
+  /* line 312, ../sass/common.scss */
   .notfound_container h3 {
     font-size: 15px;
   }
 }
-/* line 306, ../sass/common.scss */
+/* line 322, ../sass/common.scss */
 .notfound_container .image {
   width: 100%;
   height: 300px;
@@ -404,19 +423,19 @@ body {
   opacity: 0.3;
 }
 
-/* line 317, ../sass/common.scss */
+/* line 333, ../sass/common.scss */
 .article_container {
   box-sizing: border-box;
   width: 90%;
   margin: auto;
 }
 @media (max-width: 768px) {
-  /* line 317, ../sass/common.scss */
+  /* line 333, ../sass/common.scss */
   .article_container {
     margin-top: 150px;
   }
 }
-/* line 326, ../sass/common.scss */
+/* line 342, ../sass/common.scss */
 .article_container .article_wrapper {
   display: inline-block;
   box-sizing: border-box;
@@ -424,7 +443,7 @@ body {
   background-color: #34262a;
   color: white;
 }
-/* line 333, ../sass/common.scss */
+/* line 349, ../sass/common.scss */
 .article_container .article_wrapper h3 {
   font-size: 60px;
   color: #e5a663;
@@ -432,53 +451,68 @@ body {
   margin-bottom: 50px;
 }
 @media (max-width: 768px) {
-  /* line 333, ../sass/common.scss */
+  /* line 349, ../sass/common.scss */
   .article_container .article_wrapper h3 {
     font-size: 40px;
   }
 }
-/* line 344, ../sass/common.scss */
+/* line 360, ../sass/common.scss */
 .article_container .article_wrapper h2 {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 40px;
 }
 @media (max-width: 768px) {
-  /* line 344, ../sass/common.scss */
+  /* line 360, ../sass/common.scss */
   .article_container .article_wrapper h2 {
     font-size: 30px;
   }
 }
-/* line 354, ../sass/common.scss */
+/* line 370, ../sass/common.scss */
 .article_container .article_wrapper p {
   font-size: 20px;
   margin-bottom: 20px;
 }
 @media (max-width: 768px) {
-  /* line 354, ../sass/common.scss */
+  /* line 370, ../sass/common.scss */
   .article_container .article_wrapper p {
     font-size: 15px;
   }
 }
-/* line 363, ../sass/common.scss */
+/* line 379, ../sass/common.scss */
 .article_container .article_wrapper .img_60per {
   width: 60%;
   margin-left: 20%;
 }
 @media (max-width: 768px) {
-  /* line 363, ../sass/common.scss */
+  /* line 379, ../sass/common.scss */
   .article_container .article_wrapper .img_60per {
     width: 100%;
     margin-left: 0px;
   }
 }
-/* line 373, ../sass/common.scss */
+/* line 389, ../sass/common.scss */
+.article_container .article_wrapper .img_60per_white {
+  box-sizing: border-box;
+  width: 60%;
+  margin-left: 20%;
+  padding: 40px;
+  background-color: white;
+}
+@media (max-width: 768px) {
+  /* line 389, ../sass/common.scss */
+  .article_container .article_wrapper .img_60per_white {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+/* line 402, ../sass/common.scss */
 .article_container .article_wrapper .exchange {
   background-color: white;
   width: 30%;
 }
 @media (max-width: 768px) {
-  /* line 373, ../sass/common.scss */
+  /* line 402, ../sass/common.scss */
   .article_container .article_wrapper .exchange {
     width: 100%;
   }

@@ -7,5 +7,16 @@
         }
     },
     
-    "articles": []
+    "articles": [
+        {
+            "title": "Tron(trx)アーキテクチャ全体解剖", 
+            "date": "2018.2.16", 
+            "src": "/articles/article1",
+            "meta": {
+                "title": "MARON crypto currency blog | Tron(trx)アーキテクチャ全体解剖",
+                "description": "Tronのアーキテクチャライブストリーミングをわかる範囲で解説します。",
+                "url": "/article/1"
+            }
+        }
+    ]
 }

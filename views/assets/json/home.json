@@ -6,6 +6,10 @@
     },
 
     "tiles": [
+        {"title": "Tron(trx)アーキテクチャ全体解剖", "date": "2018.2.16", "url": "/article/1", "image_class": "image_tile2"}
+    ],
+
+    "tiles_temp": [
         {"title": "VIBEHub(VIBE)とは", "date": "2018.2.14", "url": "/ccy/1", "image_class": "image_tile1"}
     ]
 }

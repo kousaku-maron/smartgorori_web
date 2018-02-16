@@ -1,2 +1,138 @@
-<h3>記事ページ テスト</h3>
-<p>コンテンツ・・・・</p>
+<div class='article_wrapper'>
+    <h3><%= article.title %></h3>
+    <img class='img_60per' src='../images/tron/top.png' alt='top'>
+    <div class='margin_bottom_50px'></div>
+    <p>Tronのライブストリーミングで、Tronのアーキテクチャが紹介されました。今回はアーキテクチャについて解説したいと思います。 </p>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>概要</h2>
+    <p>
+        Tronは3層のアーキテクチャで構成されるプラットフォームです。
+    </p>
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/architecture.png' alt='architecture'>
+    <div class='margin_bottom_50px'></div>
+    <p>
+        アプリケーション層</br>
+        この層にはTronベースの分散型アプリケーション(DApp)が乗っかります。</br>
+        ※犬のゲームやOcoinなど
+    </p>
+    <p>
+        コア層</br>
+        コンセンサス機能、スマートコントラクト、アカウント管理機能が存在している。</br>
+        ※コンセンサスアルゴリズムはDPoS
+    </p>
+    <p>
+        ストレージ層</br>
+        チェーンストレージとステートストレージに切り分けてデータを保存する。</br>
+        ※今回はここが重要なポイント
+    </p>
+
+    <p>※Tronは開発途中でメインネットがリリースされていないため、アプリケーション層にまだDAppは載っていないと思う。</p>
+    <div class='margin_bottom_100px'></div>
+        
+    <h2>ストレージ層の特徴</h2>
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/compareStorage.png' alt='ストレージ比較'>
+    <div class='margin_bottom_50px'></div>
+    <p>
+        Ethereumのストレージ</br>
+        スマートコントラクトをすでに実装しているEthereumがありますね。</br>
+        Ethereumは基本的なブロックチェーンのストレージ以外に、キー・バリュータイプのストレージが存在しています。</br>
+        スマートコントラクトによってキー・バリューのストレージの中身を書き換えています。</br>
+        キー・バリューのストレージはスマートコントラクトを実行するには正直遅いし、膨大なコンピューターパワーが必要な状態です。
+    </p>
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/keyvalue.png' alt='key・valuestorage'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        Tronのストレージ</br>
+        graph DB という形式のストレージでスマートコントラクトを実装しようとしています。</br>
+        graph DB を使うことでデータの探索速度が上昇し、スマートコントラクトの処理スピードが上がります。</br>
+        graph DB の仕組みを見てみましょう。
+    </p>
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per_white' src='../images/tron/graphDB1.png' alt='graphDB'>
+    <div class='margin_bottom_50px'></div>
+    <p>
+        graph DB ではつながりも保存することができます。</br>
+        アカウント情報が保存されるまるいものをノード、つながりの線をエッジと言います。
+        ノードのデータはステートストレージに、エッジのデータはトランザクションとしてチェーンストレージに保存されます。
+    </p>
+    <p>
+        graph DB はエッジを利用して「友達の友達」を検索したりすることができます。facebookみたいですね。</br>
+        この特徴を利用することで、Tronはアカウント同士の関係性を分析しようとしています。</br>
+        この人の好きなコンテンツはあなたも好きになる可能性が高い等、DAppのリコメンドでかなり利用できそう。</br>
+    </p>
+    <div class='margin_bottom_50px'></div>
+    <p>
+        trxの送金はどう行われるのだろうか？
+    </p>
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per_white' src='../images/tron/transaction.png' alt='transaction'>
+    <div class='margin_bottom_50px'></div>
+    <p>
+        trxの送金は graph DB のエッジとして保存されます。
+        エッジということはチェーンストレージに保存されるということですね。
+    </p>
+    <p>
+        このようにストレージを切り分けてデータを保存することで、アカウントの関係性を分析しやすく高速なスマートコントラクトを作るらしいです。
+    </p>
+    <p>
+        ノードにはここにはでてきていないkhaos DBという保存エリアがありますが、コンセンサスの部分で合わせて説明するので、ここでは飛ばします。
+    </p>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>コンセンサスについて</h2>
+    <p>
+        TronのコンセンサスアルゴリズムはDPoSです。</br>
+        DPoSに詳しいわけではないので、少し間違っているかもしれません、すみません。
+    </p>
+    <p>
+        マイニング、ハッシュ関数、コンセンサスってなに？って人は先にGoogleで調べてください。
+    </p>
+    <p>
+        まずマイナーが選出されます。TRX保有数が多い人が選ばれる、、、、、はず</br>
+        TRXを保有している一般のかたは選出されたマイナーに対して投票を行う。</br>
+        マイナーは自身の保有数と投票数によりマイニング難易度は変化する。</br>
+        マイニングに成功したマイナーは投票してくれた方に報酬を分配する。
+    </p>
+    <p>
+        DPoSはPoSよりもマイナーの数が圧倒的に少なくなるため、承認のスピードが早くなります。</br>
+        悪質なマイナーには投票する人はいないため安全にブロックがはまっていく。</br>
+        たぶんこんな感じだと思います。
+    </p>
+    <div class='margin_bottom_50px'></div>
+    <p>
+        Tron独特の部分(Khaos DB)
+    </p>
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/khaosDB.png' alt='khaosDB'>
+    <div class='margin_bottom_50px'></div>
+    <p>
+        正直そこまですごいものではない。</br>
+        このKhaos DBは先ほど説明したノード(ステートストレージ)に保存されている情報です。</br>
+        マイニングにおいて、同時にマイニングが成功してしまう時がある、その時チェーンは分岐します。</br>
+        分岐したチェーンはいずれ長さに差が生まれるので、長いほうが採用される仕組みとなっています。</br>
+        ただ分岐した時点ではどちらが長くなるか予測しかできません。</br>
+        通常だと、どちらか選択をし他のチェーンは無視でマイニングを進めていくことになります。</br>
+        TronではKhaosDBに他のチェーンの情報を格納しておくことで、瞬時に最長チェーンに切り替えられるようになっています。</br>
+        ただそれだけです。。。
+    </p>
+    <div class='margin_bottom_100px'></div>
+    <p>
+        参考</br>
+        <a href='https://medium.com/@Tronfoundation/an-overview-of-trons-technical-live-stream-to-non-technical-people-3782db162710'>
+            An overview of Tron’s technical live stream to non-technical people
+        </a>
+    <p>
+        以上、になります。　最後まで見ていただきありがとうございました。</br>
+        間違い等あると思うので、気づいた方はtwitterにてダイレクトメッセージしていただけると助かります。</br>
+        今後、いろいろと仮想通貨関連の記事解説していこうと思いますので、よかったらフォローしてください　笑</br>
+        <a href="https://twitter.com/intent/follow?screen_name=maronBlockchain">
+            Follow @maronBlockchain
+        </a>
+    </p>
+    <div class='margin_bottom_100px'></div>
+</div>

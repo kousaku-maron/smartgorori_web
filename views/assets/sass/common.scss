@@ -17,6 +17,14 @@ a {
     text-decoration: none; 
 }
 
+a:link { 
+    color: $accent-color; 
+}
+
+a:visited {
+    color: $sub-color;
+}
+
 .font_perfograma {
     font-family: Perfograma;
 }
@@ -35,6 +43,10 @@ a {
 
 .margin_bottom_100px {
     margin-bottom: 100px;
+}
+
+.padding_40px {
+    padding: 40px;
 }
 
 // ヘッダー
@@ -179,12 +191,16 @@ body {
                     background-size: cover;
                 }
 
+                .image_tile0 {
+                    background-image: url('../images/btc_test.jpg');
+                }
+
                 .image_tile1 {
                     background-image: url('../images/tile/vibe.jpeg');
                 } 
 
-                .image_tile0 {
-                    background-image: url('../images/btc_test.jpg');
+                .image_tile2 {
+                    background-image: url('../images/tron/top.png');
                 }
 
                 .title {
@@ -363,6 +379,19 @@ body {
         .img_60per {
             width: 60%;
             margin-left: 20%;
+
+            @media (max-width: $widthSp) {
+                width: 100%;
+                margin-left: 0px;
+            }
+        }
+
+        .img_60per_white {
+            box-sizing: border-box;
+            width: 60%;
+            margin-left: 20%;
+            padding: 40px;
+            background-color: white;
 
             @media (max-width: $widthSp) {
                 width: 100%;
