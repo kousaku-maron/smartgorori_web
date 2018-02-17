@@ -7,5 +7,16 @@
         }
     },
     
-    "articles": []
+    "articles": [
+        {
+            "title": "Ethereum ICO の仕組み", 
+            "date": "2018.2.17", 
+            "src": "/techs/tech1",
+            "meta": {
+                "title": "MARON crypto currency blog | Ethereum ICO の仕組み",
+                "description": "ERC20トークンによるICOの解説",
+                "url": "/tech/1"
+            }
+        }
+    ]
 }

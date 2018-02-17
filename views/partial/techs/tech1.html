@@ -1,2 +1,126 @@
-<h3>技術ページ テスト</h3>
-<p>コンテンツ・・・・</p>
+<div class='article_wrapper'>
+    <h3><%= article.title %></h3>
+    <img class='img_60per' src='../images/ethereum/ico.jpg' alt='ico'>
+    <div class='margin_bottom_50px'></div>
+    <p>EthereumによるICOの仕組みを解説します。</p>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>ICOとは</h2>
+    <p>
+        ICOは"Initial Coin Offering"であり、株で言うIPO(新規上場株)みたいなものです。</br>
+        ここではよくICOに利用されているEthereumでの資金調達の仕組みを解説します。</br>
+        最近流行っているNEO等でのICOの仕組みも多分そこまで変わらないと思います。</br>
+    </p>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>理解してるよって人</h2> 
+    <p>
+        Ethereum上に独自トークンを発行。</br>
+        独自トークンとEthereumを交換することで調達じゃない？それぐらいわかるよ。。。</br>
+    </p>
+    <p>
+        では、独自トークンはどうやって発行してるのか？</br>
+        トラストレスにEthereumと交換できる仕組みってどうなってるの？</br>
+        ここあたりを説明できる方は、読む必要ありません。　笑</br>
+    </p>
+    <p>
+        ※トラストレス: 銀行等の第3者機関なしに信頼できる取引が可能
+    </p>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>独自トークン発行の仕組み</h2>
+    <p>まず、独自トークンの発行うんぬんの前にスマートコントラクトの仕組みを理解しないといけません。</p>
+    
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/ethereum/smartcontract1.png' alt='smartcontract'>
+    <div class='margin_bottom_50px'></div>
+    
+    <p>
+        スマートコントラクトは誰でも書くことができます。</br>
+        書いたプログラムをEthereum上にデプロイしてあげることでスマートコントラクト実装完了となります。</br>
+        デプロイされたプログラムにはスマートコントラクトアドレスが付与されます。
+    </p>
+    <p>
+        ※スマートコントラクトのデプロイにはetherが必要です。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/ethereum/smartcontract2.png' alt='smartcontract'>
+    <div class='margin_bottom_50px'></div>
+    
+    <p>
+        スマートコントラクトにデプロイした人に俺トークンを付与する関数を記載しておきます。</br>
+        俺トークンを付与する関数はデプロイ時に1度のみしか実行できないようにしておきます。</br>
+        また、etherと俺トークンを交換できる関数を記載しておく。</br>
+        ICO開始時にはこの関数を利用することでトークンとetherを交換させる仕組み。</br>
+        その他にも関数を追加して機能を充実させていくことも可能。</br>
+    </p>
+
+    <p>
+        これで独自トークン発行の方法、配布方法がわかりましたね。
+    </p>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>なぜこれがトラストレス?</h2>
+    <p>
+        スマートコントラクトにプログラムは書き換えができない、また中身は誰でも確認できるからです。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/ethereum/smartcontract3.png' alt='smartcontract'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        図のように、プログラムを変更しようとしても新しくデプロイするしか方法がなく、</br>
+        アドレス(0001)のプログラムは消せないし、変更もできません。</br>
+        なのでプログラムを書き換えて不正してやろうとしてもできないのです。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/ethereum/smartcontract4.png' alt='smartcontract'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        スマートコントラクトアドレスからプログラムの中身を誰でも見れるので、不正しようとしても賢い人たちにバレます。
+    </p>
+
+    <p>
+        どのようにしてトラストレスな取引、ICOが可能となっているのかわかったかな、、、</br>
+        もちろん、俺トークン自体が詐欺コインだという可能はありますがそこはどうしようもありません。
+    </p>
+
+    <div class='margin_bottom_100px'></div>
+
+    <h2>よく聞くERC20準位って？</h2>
+    <p>俺トークンを発行する際の、関数のフォーマットみたいなものです。</p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/ethereum/erc20.png' alt='erc20'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        ERC20規格で定まっている関数をプログラムに書くことでERC20規格トークンということができます。</br>
+        ERC20規格ではいろいろ関数があるのですが、全てを書かず必要最低限の関数のみを書き込んでいるものが多い。</br>
+    </p>
+    <p>
+        メリットとして、ERC20準位同士のトークンは共通の関数を持っているので交換とかがしやすくなったり、</br>
+        トークンを管理するアプリ(My Ethereum wallet)とかが作りやすい。</br>
+        ERC20準位でないと、個別にアプリ側でプログラムをかかないといけなかったりするので、、、
+    </p>
+    <p>
+        以上、Ethereum の ICO の仕組みでした　笑
+    </p>
+    <div class='margin_bottom_100px'></div>
+
+    <p>
+        技術面を中心の仮想通貨、ブロックチェーンの仕組みをまとめていく予定です。</br>
+        良ければ、twitterフォロー宜しくお願いします。</br>
+    </p>
+
+    <p>
+        <a href="https://twitter.com/intent/follow?screen_name=maronBlockchain">
+            Follow @maronBlockchain
+        </a>
+    </p>
+    <div class='margin_bottom_100px'></div>
+</div>
