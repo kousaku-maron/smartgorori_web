@@ -51,7 +51,7 @@ module.exports = function(app, render) {
         })
         
         .get('/tech/:id', (ctx, next) => {
-            var json = JSON.parse(fs.readFileSync(techJson, 'utf8'));
+            var json = techJson;
             var id = ctx.params.id;
             
             if(id <= json.articles.length){
