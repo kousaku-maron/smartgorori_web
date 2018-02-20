@@ -17,6 +17,17 @@
                 "description": "Tronのアーキテクチャライブストリーミングをわかる範囲で解説します。",
                 "url": "/article/1"
             }
+        },
+
+        {
+            "title": "Tron(trx)のコンセンサスアルゴリズム考察", 
+            "date": "2018.2.19", 
+            "src": "/articles/article2",
+            "meta": {
+                "title": "MARON crypto currency blog | Tron(trx)のコンセンサスアルゴリズム考察",
+                "description": "Tronのgithubドキュメントのコンセンサス説明部分を解説",
+                "url": "/article/2"
+            }
         }
     ]
 }

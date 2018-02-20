@@ -1,2 +1,150 @@
-<h3>記事ページ テスト</h3>
-<p>id 2</p>
+<div class='article_wrapper'>
+    <h3><%= article.title %></h3>
+    <img class='img_60per_white' src='../images/tron/java-tron.png' alt='java-tron'>
+    <div class='margin_bottom_50px'></div>
+    <p>Tronのgithub(Tronのプログラムが公開されているサイト)のドキュメントにコンセンサスを説明している箇所があったのでまとめました。</p>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>Tronのプログラムが公開されているgithubとは・・・</h2>
+    <p>
+        githubとは自分が書いたプログラムのコードをアップロードしてみんなに公開できるサイトです。</br>
+        厳密にはプログラムをみんなで協力して書きたい時に、githubにアップロードすることで簡単に開発を進められたりします。</br>
+        また公開することで、プログラムにバグがあれば誰かが直してくれたり色々嬉しいことがあります。</br>
+        bitcoin等、他の仮想通貨のプログラムもわりとgithubにアップロードされているので見てみるのもいいかもしれません。
+    </p>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>考察</h2>
+    <p>
+        githubにアップロードされている<a href='https://github.com/tronprotocol/java-tron'>tronのページ</a>にあるリンクがあります。</br>
+        リンク先にはなんとintroductionというTronの概要を説明している<a href='http://wiki.tron.network/en/latest/introduction.html'>ページ</a>>を見つけました。</br>
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/PoS.png' alt='tron PoS'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        どうやらこのページではTronのコンセンサスアルゴリズムは最終的にPoSとPoWの中間を目指すと書かれています。</br>
+        この前のTron Live Streamingでの記事ではDPoSと説明されていましたね。</br>
+        投票をうまく利用したPoSとPoWの中間になるということでしょうか、、、真相はわかりません。</br>
+    </p>
+    <p>※ Tron Live Streamingでの内容は記事書いてありますので<a href='/article/1'>こちらへ</a></p>
+    
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/tron_consensus1.png' alt='tron consensus'>
+    <div class='margin_bottom_50px'></div>
+    
+    <p>
+        文字が小さいですね　笑</br>
+        簡略化した図つくったので、それで説明します。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/tron_consensus2.png' alt='tron consensus'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        どうやら、承認プロセスが2段階で行われます。</br>
+        承認プロセスで全体の2/3以上の承認を得られることで、ステータスがOKとなります。</br>
+        2/3以上の承認を得られないと、ステータスはOKとなりません。</br>
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/tron_consensus3.png' alt='tron consensus state'>
+    <div class='margin_bottom_50px'></div>
+    
+    <p>
+        Tronのコンセンサスアルゴリズムでは承認プロセスを経て3つの状態に変化していきます。</br>
+    </p>
+    <p>
+        イメージとして、誰かがブロックを申請する。</br>
+        状態が「pre-vote」になる。</br>
+        2/3以上の承認を得る→「pre-vote」のステータスがOKになる。</br>
+        状態が「pre-commit」になる。</br>
+        2/3以上の承認を得る→「pre-commit」のステータスがOKになる。</br>
+        状態が「pre-submmited」になる。</br>
+        「pre-vote」と「pre-commit」のステータスをチェック→ブロックをチェーンにつなぐ。
+    </p>
+    <p>
+        全体の1/3までビザンチン将軍問題を対応できます。
+        ビザンチン将軍問題は悪いことを企んだグループが不正なブロックやトランザクション情報を配信して攻撃される問題。
+    </p>
+    <div class='margin_bottom_100px'></div>
+
+    <p>
+        こちらは、コンセンサスのロードマップてきなものでしょうか。。。
+    </p>
+    
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/tron_consensus4.png' alt='tron consensus'>
+    <div class='margin_bottom_50px'></div>
+    
+    <p>
+        第1段階ではkafkaを利用してシステム統合を目指す。とりあえずちゃんと動くシステムを作るてきな感じですね。</br>
+    </p>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        第２段階はすごいおもしろい言葉がでてきました。「raft!!!!」</br>
+        分散型合意形成アルゴリズムであります。正直薄くしか理解できていません「raft」に関しては、、、</br>
+    </p>
+
+    <p> 
+        少し間違っているかもしれませんが軽く説明すると、</br>
+        ノード(各ユーザー)はフォロワー、立候補者、リーダーの3つの状態を持つことができます。</br>
+        はじめはみなフォロワーからスタートします。</br>
+    </p>
+    <p> 
+        フォロワーから時間が経つと立候補者にランクアップします。</br>
+        立候補者になった人は俺立候補者シグナルを配信します。</br>
+        俺立候補者シグナルを受け取ったフォロワーたちは配信先に"投票"します。</br>
+        投票が過半数上回れば、晴れてリーダー就任です。</br>
+    </p>
+    <p> 
+        リーダーは常に俺リーダーシグナルを配信します。</br>
+        俺リーダーシグナルを受け取ったひとはフォロワーに降格します。</br>
+        リーダーは合意形成をすることができます。(多分マイニングできるようになると思われる)</br>
+    </p>
+
+    <p>
+        ※ 立候補者は複数同時で昇格する可能性があますが、俺立候補シグナルに投票できるのは初回のみという制限があるため、リーダーは必ず一人しか生まれない。</br>
+    </p>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        第3段階はPoSを実現し、PoWとPoSの中間的なコンセンサスでビザンチン将軍問題を解決すると言っています。</br>
+        はたして投票がraftの投票に絡むのか色々謎が深いですがかなりユニークなコンセンサスアルゴリズムになるのではないかと思われます。</br>
+    </p>
+    <div class='margin_bottom_100px'></div>
+    
+    <p>
+        今回はコンセンサスに着目して書かせていただきました。</br>
+        次はトランザクションに着目して書こうと思います。</br>
+        かなり雑ですが、最後まで読んでいただきありがとうございました。</br>
+    </p>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>参考</h2>
+    <p>
+        <a href='http://wiki.tron.network/en/latest/introduction.html'>
+            Tron Protocol documentation [introduction]
+        </a>
+    </p>
+    <p>
+        <a href='https://raft.github.io/'>
+            raftの分散型アルゴリズム
+        </a>
+    </p>
+    <div class='margin_bottom_100px'></div>
+
+    <p>
+        仮想通貨の技術視点で記事を書いていきます。フォローよろしくお願いします。
+    </p>
+    <p>
+        <a href="https://twitter.com/intent/follow?screen_name=maronBlockchain">
+            Follow @maronBlockchain
+        </a>
+    </p>
+    <div class='margin_bottom_100px'></div>
+</div>

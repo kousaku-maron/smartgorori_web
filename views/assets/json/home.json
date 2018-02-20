@@ -6,6 +6,7 @@
     },
 
     "tiles": [
+        {"title": "Tron(trx)のコンセンサスアルゴリズム考察", "date": "2018.2.19", "url": "/article/2", "image_class": "image_tile4"},
         {"title": "Ethereum ICO の仕組み", "date": "2018.2.17", "url": "/tech/1", "image_class": "image_tile3"},
         {"title": "Tron(trx)アーキテクチャ全体解剖", "date": "2018.2.16", "url": "/article/1", "image_class": "image_tile2"}
     ],
