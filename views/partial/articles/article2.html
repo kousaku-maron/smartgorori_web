@@ -5,7 +5,7 @@
     <p>Tronのgithub(Tronのプログラムが公開されているサイト)のドキュメントにコンセンサスを説明している箇所があったのでまとめました。</p>
     <div class='margin_bottom_100px'></div>
 
-    <h2>Tronのプログラムが公開されているgithubとは・・・</h2>
+    <h2>githubとは・・・</h2>
     <p>
         githubとは自分が書いたプログラムのコードをアップロードしてみんなに公開できるサイトです。</br>
         厳密にはプログラムをみんなで協力して書きたい時に、githubにアップロードすることで簡単に開発を進められたりします。</br>
@@ -14,114 +14,356 @@
     </p>
     <div class='margin_bottom_100px'></div>
 
-    <h2>考察</h2>
+    <h2>話の進め方</h2>
+    <p>・introductionでの説明</p>
+    <p>
+        ・考察</br>
+        - introductionの記載事項</br>
+        - 草案</br>
+        - 最有力案解説</br>
+    </p>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>introductionでの説明</h2>
     <p>
         githubにアップロードされている<a href='https://github.com/tronprotocol/java-tron'>tronのページ</a>にあるリンクがあります。</br>
         リンク先にはなんとintroductionというTronの概要を説明している<a href='http://wiki.tron.network/en/latest/introduction.html'>ページ</a>>を見つけました。</br>
     </p>
-
-    <div class='margin_bottom_50px'></div>
-    <img class='img_60per' src='../images/tron/PoS.png' alt='tron PoS'>
-    <div class='margin_bottom_50px'></div>
-
     <p>
-        どうやらこのページではTronのコンセンサスアルゴリズムは最終的にPoSとPoWの中間を目指すと書かれています。</br>
-        この前のTron Live Streamingでの記事ではDPoSと説明されていましたね。</br>
-        投票をうまく利用したPoSとPoWの中間になるということでしょうか、、、真相はわかりません。</br>
+        では、解説させていただきます。    
     </p>
-    <p>※ Tron Live Streamingでの内容は記事書いてありますので<a href='/article/1'>こちらへ</a></p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/proposer_and_node.png' alt='proposerとノード'>
+    <div class='margin_bottom_50px'></div>
+
+    <h1>ノード</h1>
+    <p>Tronネットワークに接続しているアカウント</p>
+    
+    <p>・仕事内容</p>
+    <p>
+        [トランザクションの保存]</br>
+        Tronネットワークに接続しているアカウントなので、trx送金処理などのトランザクションを検知できる。</br>
+        検知したトランザクションを"pending transaction"として一時的に保存していく。
+    </p>
+    <p>
+        [ブロック承認依頼の返答]</br>
+        proposerからブロック承認依頼がくることがある。</br>
+        ブロック承認依頼は合計2回来る。</br>
+        ブロックの中身を検証して正しかった場合は承認返答、正しくなかった場合は拒否返答をする。
+    </p>
+    <p>
+        [自身のブロックチェーンの更新]</br>
+        proposerからブロックがチェーンにつながった知らせがくることがある。</br>
+        新しいブロックが問題ないかチェックし、自身のブロックチェーンにつなげる。
+    </p>
+    <div class='margin_bottom_50px'></div>
+
+    <h1>proposer</h1>
+    <p>ブロックを作る権利を持ったノード</p>
+    
+    <p>・仕事内容</p>
+    <p>
+        [ブロックの作成]</br>
+        一時的に保存していた"pending transaction"を含んだブロックを作成する。
+    </p>
+    <p>
+        [ブロックの承認依頼]</br>
+        Tronネットワークに接続しているノードにブロック承認依頼をなげる。</br>
+        ブロック承認依頼は合計2回なげる。
+    </p>
+    <p>
+        [ブロックのコミット]</br>
+        2回目のブロック承認依頼が問題なければブロックをチェーンにつなぐ。</br>
+        ブロックがチェーンにはまったことをノードに伝える。
+    </p>
+    <div class='margin_bottom_50px'></div>
+
+    <h1>ブロック承認までの流れ</h1>
     
     <div class='margin_bottom_50px'></div>
-    <img class='img_60per' src='../images/tron/tron_consensus1.png' alt='tron consensus'>
+    <img class='img_60per' src='../images/tron/request_block_accept.png' alt='ブロック承認依頼'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        はじめに、proposerはブロックを作成しブロック承認依頼を投げる。</br>
+        proposerはブロック承認依頼の返答を待つ。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/reply.png' alt='ブロック承認依頼返答'>
     <div class='margin_bottom_50px'></div>
     
     <p>
-        文字が小さいですね　笑</br>
-        簡略化した図つくったので、それで説明します。
+        ノードはブロック承認依頼の返答を行う。</br>
+        proposerは2/3以上の承認返答を受け取れば次のステージへ。</br>
+        ※ 2/3以上の承認返答を受け取れなければ終わり。
     </p>
 
     <div class='margin_bottom_50px'></div>
-    <img class='img_60per' src='../images/tron/tron_consensus2.png' alt='tron consensus'>
-    <div class='margin_bottom_50px'></div>
-
-    <p>
-        どうやら、承認プロセスが2段階で行われます。</br>
-        承認プロセスで全体の2/3以上の承認を得られることで、ステータスがOKとなります。</br>
-        2/3以上の承認を得られないと、ステータスはOKとなりません。</br>
-    </p>
-
-    <div class='margin_bottom_50px'></div>
-    <img class='img_60per' src='../images/tron/tron_consensus3.png' alt='tron consensus state'>
+    <img class='img_60per' src='../images/tron/request_block_accept.png' alt='ブロック承認依頼'>
     <div class='margin_bottom_50px'></div>
     
     <p>
-        Tronのコンセンサスアルゴリズムでは承認プロセスを経て3つの状態に変化していきます。</br>
+        proposerはもう一度ブロック承認依頼を投げる。</br>
+        proposerはブロック承認依頼の返答を待つ。
     </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/reply_commit.png' alt='ブロック承認依頼返答とコミット'>
+    <div class='margin_bottom_50px'></div>
+    
     <p>
-        イメージとして、誰かがブロックを申請する。</br>
-        状態が「pre-vote」になる。</br>
-        2/3以上の承認を得る→「pre-vote」のステータスがOKになる。</br>
-        状態が「pre-commit」になる。</br>
-        2/3以上の承認を得る→「pre-commit」のステータスがOKになる。</br>
-        状態が「pre-submmited」になる。</br>
-        「pre-vote」と「pre-commit」のステータスをチェック→ブロックをチェーンにつなぐ。
+        ノードはブロック承認依頼の返答を行う。</br>
+        proposerは2/3以上の承認返答を受け取ればブロックをチェーンにつなぐ。
     </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/bloadcast_commit.png' alt='ブロックお知らせとコミット'>
+    <div class='margin_bottom_50px'></div>
+    
     <p>
-        全体の1/3までビザンチン将軍問題を対応できます。
-        ビザンチン将軍問題は悪いことを企んだグループが不正なブロックやトランザクション情報を配信して攻撃される問題。
+        proposerはブロックをチェーンにつなげたことを知らせる。</br>
+        ノードは新しいブロックをチェックし、問題なければ自身のブロックチェーンにつなげる。
     </p>
     <div class='margin_bottom_100px'></div>
 
-    <p>
-        こちらは、コンセンサスのロードマップてきなものでしょうか。。。
-    </p>
-    
-    <div class='margin_bottom_50px'></div>
-    <img class='img_60per' src='../images/tron/tron_consensus4.png' alt='tron consensus'>
-    <div class='margin_bottom_50px'></div>
-    
-    <p>
-        第1段階ではkafkaを利用してシステム統合を目指す。とりあえずちゃんと動くシステムを作るてきな感じですね。</br>
-    </p>
-    <div class='margin_bottom_50px'></div>
+    <h2>考察</h2>
 
-    <p>
-        第２段階はすごいおもしろい言葉がでてきました。「raft!!!!」</br>
-        分散型合意形成アルゴリズムであります。正直薄くしか理解できていません「raft」に関しては、、、</br>
-    </p>
+    <h1>introductionの記載事項</h1>
 
-    <p> 
-        少し間違っているかもしれませんが軽く説明すると、</br>
-        ノード(各ユーザー)はフォロワー、立候補者、リーダーの3つの状態を持つことができます。</br>
-        はじめはみなフォロワーからスタートします。</br>
-    </p>
-    <p> 
-        フォロワーから時間が経つと立候補者にランクアップします。</br>
-        立候補者になった人は俺立候補者シグナルを配信します。</br>
-        俺立候補者シグナルを受け取ったフォロワーたちは配信先に"投票"します。</br>
-        投票が過半数上回れば、晴れてリーダー就任です。</br>
-    </p>
-    <p> 
-        リーダーは常に俺リーダーシグナルを配信します。</br>
-        俺リーダーシグナルを受け取ったひとはフォロワーに降格します。</br>
-        リーダーは合意形成をすることができます。(多分マイニングできるようになると思われる)</br>
-    </p>
-
-    <p>
-        ※ 立候補者は複数同時で昇格する可能性があますが、俺立候補シグナルに投票できるのは初回のみという制限があるため、リーダーは必ず一人しか生まれない。</br>
-    </p>
-    <div class='margin_bottom_50px'></div>
-
-    <p>
-        第3段階はPoSを実現し、PoWとPoSの中間的なコンセンサスでビザンチン将軍問題を解決すると言っています。</br>
-        はたして投票がraftの投票に絡むのか色々謎が深いですがかなりユニークなコンセンサスアルゴリズムになるのではないかと思われます。</br>
-    </p>
-    <div class='margin_bottom_100px'></div>
+    <p>PoSアルゴリズムによりproposerが選ばれる。</p>
+    <p>※ PoSはトークン保有数・期間が多い人ほど選ばれやすい仕組み</p>
     
     <p>
-        今回はコンセンサスに着目して書かせていただきました。</br>
-        次はトランザクションに着目して書こうと思います。</br>
-        かなり雑ですが、最後まで読んでいただきありがとうございました。</br>
+    Tronのコンセンサスアルゴリズムは3段階で進めていく。</br>
+     - 1段階はkafkaベース。(たぶん重要なところはなさそうなので無視)</br>
+     - 2段階ではraftベースでより分散化し配布機能(たぶんtrxのことだろう)をよりよくする。</br>
+     - 3段階ではPoSとPoWの中間的なアルゴリズムをベースにする。
+    </p> 
+
+    <p>
+        ※ kafkaは知らなくていいです。</br>
+        ※ raftベースは"introductionでの説明"での合意プロセスなはず。</br>
+        ※ PoWは複雑な計算を一番早く解けた人がブロックをはめられる仕組み。</br>
+        ※ PoSはトークン保有数・期間が多い人ほどブロックをはめられる仕組み。
+    </p>
+    <div class='margin_bottom_50px'></div>
+
+    <h1>草案</h1>
+    
+    <p>
+        草案(Master)</br>
+        trx保有数・期間が多い人ほど複雑な計算が簡単になり、解けた人はproposerになることができる。</br>
+        proposerになった人はraftベースの合意プロセスを通じで、承認されたらブロックをはめられる。</br>
+        proposerはtrxの報酬を得る。
+    </p>
+    
+    <p>
+        しかし、Live Streamingの記事ではDPoSと書かれていた。</br>
+        これを考慮して、考察を練ってみた。</br>
+        案が2つ出てしまった。
+    </p>
+    
+    <p>
+        草案１</br>
+        trx保有数・期間が多い人がまず数百人選ばれる。(この人達がこれから先の争いに参加)</br>
+        ノードは選ばれた数百人にtrxで投票する。</br>
+        trx保有数・期間・trx投票数が多い人ほど複雑な計算が簡単になり、解けた人はproposerになることができる。</br>
+        proposerになった人はraftベースの合意プロセスを通じで、承認されたらブロックをはめられる。</br>
+        proposerと彼に投票したノードはtrx報酬を得る。
+    </p>
+
+    <p>
+        草案2</br>
+        trx保有数・期間が多い人ほど複雑な計算が簡単になり、解けた人はproposerになることができる。</br>
+        proposerになった人はraftベースの合意プロセスを通じで、承認されたらブロックをはめられる。</br>
+        proposerと、合意プロセス内で彼に承認返答したノードはtrx報酬を得る。
+    </p>
+
+    <p>
+        どちらが最有力か考える。</br>
+        Live Streamingの記事ではTronネットワークはトランザクションの処理を早くするとかかれていた。</br>
+        raftベースでスピードを上げられるのは草案1である。
+    </p>
+    <div class='margin_bottom_50px'></div>
+
+    <h1>最有力案解説</h1>
+    
+    <p>最有力案は草案1なので、草案1について解説する。</p>
+    
+    <p>
+        草案１</br>
+        trx保有数・期間が多い人がまず数百人選ばれる。(この人達がこれから先の争いに参加)</br>
+        ノードは選ばれた数百人にtrxで投票する。</br>
+        trx保有数・期間・trx投票数が多い人ほど複雑な計算が簡単になり、解けた人はproposerになることができる。</br>
+        proposerになった人はraftベースの合意プロセスを通じで、承認されたらブロックをはめられる。</br>
+        proposerと彼に投票したノードはtrx報酬を得る。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/vote.png' alt='代表者への投票'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        まずはtrx保有数の多い人たちが代表者としてリストアップされる。
+        報酬が欲しいノードは代表者に投票する。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/difficulty.png' alt='PoW難易度調整'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        代表者のPoW難易度はtrx保有数・期間、trx投票数により調整される。
+        代表者は頑張ってPoW計算をする。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/elect_proposer.png' alt='proposerにランクアップ'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        PoW計算を解いた代表者が現れ、proposerとなる。
+    </p>
+
+    <p>
+        ここからraftベースの合意プロセスが開始される。
+        "introductionでの説明"と同じ流れである。
+    </p>
+
+    <p>合意プロセスを始める前にraftで登場するものの説明をしておく。</p>
+    
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/term.png' alt='raftのterm'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        raftにはtermと呼ばれる論理時間が存在する。
+        termにより、ノードは古いproposerか新しいproposerか判断できる。
+        ※ indexやtimeoutなどもあるが、今回は説明しない。
+    </p>
+
+    <p>では続きを説明、</p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/request_raft.png' alt='raft承認依頼１回目'>
+    <div class='margin_bottom_50px'></div>
+    
+    <p>
+        承認プロセス1回目
+        proposerになった段階でtermに1を足す。
+        proposerはブロックを作る。
+        proposerは"term"と共にブロック承認依頼をノードに送る。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/raft_reply.png' alt='raft承認返答1回目'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        ノードは"term"が古くないかとブロックの中身をチェックし、承認返答する。
+        ノードは一時的に"term"とブロックの中身を記録する。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/raft_request2.png' alt='raft承認依頼2回目'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        承認プロセス2回目
+        2/3以上の承認返答を受け取ったproposerは、
+        再度、"term"と共にブロック承認依頼を送る。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/raft_reply2.png' alt='raft承認返答2回目'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>ノードは"term"が古くないかとブロックの中身をチェックし、承認返答する。</p>
+    
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/raft_commit.png' alt='raftブロックコミット'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        2/3以上の承認返答を受け取ったproposerは、
+        ブロックをチェーンにつなげ、ノードに知らせる。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/mining.png' alt='trx報酬分配'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>proposerと彼に投票したノードはtrx報酬を得る。</p>
+    
+    <p>同時に2人のproposerが生まれた場合は？</p>
+    
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/raft_fail.png' alt='raft承認プロセス1回目(term[2])'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        承認プロセス1回目
+        proposerが2人現れる。
+        proposer1は"term[2]"でブロック承認依頼を送る。
+        ノードはproposer1からブロック承認依頼に承認返答する。
+        ノードは"term[2]"とブロックの中身を記録する。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/raft_fail2.png' alt='raft承認プロセス1回目(term[3])'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        proposer2は"term[3]"でブロック承認依頼を送る。
+        ノードはproposer2からブロック承認依頼の"term"が新しいので承認返答する。
+        ノードは"term[3]"とブロックの中身を記録する。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/raft_fail3.png' alt='raft承認プロセス2回目'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        承認プロセス2回目
+        proposer1はブロック承認依頼を送る。
+        proposer2もブロック承認依頼を送る。
+        ノードはproposer1からブロック承認依頼の"term[2]"が古いので拒否返答する。
+        ノードはproposer2からブロック承認依頼を承認返答する。
+    </p>
+
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/raft_fail4.png' alt='raftブロックコミット'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>proposer2はブロックをチェーンにつなげ、ノードに知らせる。</p>
+    
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/tron/raft_fail5.png' alt='raft報酬配分'>
+    <div class='margin_bottom_50px'></div>
+
+    <p>
+        proposer2と彼に投票したノードはtrx報酬を得る。
+        proposer2はお知らせを聞いたノードは自身のチェーンにブロックをつなげる。
+    </p>
+    
+    <p>
+        このように、raftの合意プロセスではチェーンの分岐は起きないようになっている。
+        しかし、Live Streamingの記事でKhaosDBなるものが紹介されていた。
+        これは分岐したチェーンを記録することで効率的にメインチェーンを入れ替えられるメリットがあると・・・
+    </p>
+
+    <p>
+        つまり、ここまで強固なraftを合意プロセスは踏まれないということになる。
+        たぶん"term"の概念が少し緩くなるのだろう。
+        どのように緩くなるのかは正直自分の実力では予想もできない。
+        そのため、深堀するのはココらへんが限界である。
+    </p>
+
+    <p>
+        white paperの更新があれば明らかになるのかもしれない。
+        trxのアーキテクチャはかなり複雑なものになる気がしてならない・・・・
     </p>
     <div class='margin_bottom_100px'></div>
 
