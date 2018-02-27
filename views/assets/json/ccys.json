@@ -7,7 +7,18 @@
         }
     },
     
-    "articles": [],
+    "articles": [
+        {
+            "title": "MANA(分散型VRプラットフォーム)とは", 
+            "date": "2018.2.28", 
+            "src": "/ccys/ccy1",
+            "meta": {
+                "title": "MARON crypto currency blog | MANA(分散型VRプラットフォーム)とは",
+                "description": "分散型VRプラットフォームのMANAについて説明します。",
+                "url": "/ccy/1"
+            }
+        }
+    ],
 
     "articles_temp": [
         {
