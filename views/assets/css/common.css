@@ -545,12 +545,29 @@ body {
   }
 }
 /* line 437, ../sass/common.scss */
+.article_container .article_wrapper .movieWraper {
+  position: relative;
+  width: calc(100% - 10px);
+  margin: 0 auto;
+}
+/* line 442, ../sass/common.scss */
+.article_container .article_wrapper .movieWraper .iframeWrap {
+  height: 0;
+  padding-bottom: 62.5%;
+}
+/* line 446, ../sass/common.scss */
+.article_container .article_wrapper .movieWraper .iframeWrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 454, ../sass/common.scss */
 .article_container .article_wrapper .exchange {
   background-color: white;
   width: 30%;
 }
 @media (max-width: 768px) {
-  /* line 437, ../sass/common.scss */
+  /* line 454, ../sass/common.scss */
   .article_container .article_wrapper .exchange {
     width: 100%;
   }
