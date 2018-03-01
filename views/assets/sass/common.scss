@@ -356,6 +356,7 @@ body {
 .article_container {
     box-sizing: border-box;
     width: 90%;
+    max-width: 800px;
     margin: auto;
 
     @media (max-width: $widthSp) {
@@ -411,6 +412,15 @@ body {
             }
         }
 
+        .img_100per {
+            width: 100%;
+        }
+
+        .img_100per_white {
+            width: 100%;
+            background-color: white;
+        }
+        
         .img_60per {
             width: 60%;
             margin-left: 20%;

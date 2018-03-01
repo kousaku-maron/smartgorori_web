@@ -1,8 +1,9 @@
 {
     "list": {
+        "title": "記事一覧",
         "meta": {
-            "title": "MARON crypto currency blog | 記事一覧",
-            "description": "記事一覧",
+            "title": "まろん仮想通貨ブログ | 記事一覧",
+            "description": "仮想通貨のニュース、イベント、技術の情報のまとめです。",
             "url": "/article"
         }
     },
@@ -13,7 +14,7 @@
             "date": "2018.2.16", 
             "src": "/articles/article1",
             "meta": {
-                "title": "MARON crypto currency blog | Tron(trx)アーキテクチャ全体解剖",
+                "title": "まろん仮想通貨ブログ | Tron(trx)アーキテクチャ全体解剖",
                 "description": "Tronのアーキテクチャライブストリーミングをわかる範囲で解説します。",
                 "url": "/article/1"
             }
@@ -24,8 +25,8 @@
             "date": "2018.2.19", 
             "src": "/articles/article2",
             "meta": {
-                "title": "MARON crypto currency blog | Tron(trx)のコンセンサスアルゴリズム考察",
-                "description": "Tronのgithubドキュメントのコンセンサス説明部分を解説",
+                "title": "まろん仮想通貨ブログ | Tron(trx)のコンセンサスアルゴリズム考察",
+                "description": "Tronのgithubドキュメントのコンセンサス説明部分を解説します。",
                 "url": "/article/2"
             }
         }

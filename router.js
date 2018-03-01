@@ -23,16 +23,17 @@ module.exports = function(app, render) {
         .get('/ccy', (ctx, next) => {
             var json = ccyJson;
             var meta = json.list.meta;
+            var contentTitle = json.list.title; 
             var articles = json.articles;
-            return ctx.render('list', { meta, articles });
+            return ctx.render('ccy_list', { meta, articles, contentTitle });
         })
 
-        .get('/ccy/:id', (ctx, next) => {
+        .get('/ccy/:pair', (ctx, next) => {
             var json = ccyJson;
-            var id = ctx.params.id;
+            var pair = ctx.params.pair;
             
-            if(id <= json.articles.length){
-                var article = json.articles[id-1];
+            if(pair in json.articles){
+                var article = json.articles[pair];
                 var meta = article.meta;
                 return ctx.render('article', { meta, article });
             }
@@ -46,8 +47,9 @@ module.exports = function(app, render) {
         .get('/tech', (ctx, next) => {
             var json = techJson;
             var meta = json.list.meta;
+            var contentTitle = json.list.title;
             var articles = json.articles;
-            return ctx.render('list', { meta, articles });
+            return ctx.render('list', { meta, articles, contentTitle });
         })
         
         .get('/tech/:id', (ctx, next) => {
@@ -69,8 +71,9 @@ module.exports = function(app, render) {
         .get('/article', (ctx, next) => {
             var json = articleJson;
             var meta = json.list.meta;
+            var contentTitle = json.list.title;
             var articles = json.articles;
-            return ctx.render('list', { meta, articles });
+            return ctx.render('list', { meta, articles, contentTitle });
         })
 
         .get('/article/:id', (ctx, next) => {

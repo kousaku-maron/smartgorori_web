@@ -2,14 +2,14 @@
 <div class='list_container'>
     <h3 class='title'><%= contentTitle %></h3>
 
-    <% if (articles.length == 0) { %>
+    <% if (Object.keys(articles).length == 0) { %>
         <p class='message'>準備中です</p>
     <% } %>
 
     <ul>
-        <% for(var i=0; i<articles.length; i++){ %>
-            <li><a href=<%= articles[i].meta.url %>>
-                <%= articles[i].date %> <%= articles[i].title %>
+        <% for(pair in articles){ %>
+            <li><a href=<%= articles[pair].meta.url %>>
+                    <%= articles[pair].date %> <%= articles[pair].title %>
             </a></li>
         <% } %>
     </ul>

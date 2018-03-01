@@ -1,8 +1,9 @@
 {
     "list": {
+        "title": "技術一覧",
         "meta": {
-            "title": "MARON crypto currency blog | 技術一覧",
-            "description": "技術一覧",
+            "title": "まろん仮想通貨ブログ | 技術一覧",
+            "description": "仮想通貨で使われている技術を詳しくまとめた記事です。",
             "url": "/tech"
         }
     },
@@ -13,8 +14,8 @@
             "date": "2018.2.17", 
             "src": "/techs/tech1",
             "meta": {
-                "title": "MARON crypto currency blog | Ethereum ICO の仕組み",
-                "description": "ERC20トークンによるICOの解説",
+                "title": "まろん仮想通貨ブログ | Ethereum ICO の仕組み",
+                "description": "Ethereumを利用したICOの仕組みを詳しく解説します。",
                 "url": "/tech/1"
             }
         }
