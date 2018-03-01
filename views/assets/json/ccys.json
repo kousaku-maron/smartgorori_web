@@ -1,24 +1,27 @@
 {
     "list": {
+        "title": "仮想通貨一覧",
         "meta": {
-            "title": "MARON crypto currency blog | 仮想通貨一覧",
-            "description": "仮想通貨一覧",
+            "title": "まろん仮想通貨ブログ | 仮想通貨一覧",
+            "description": "仮想通貨の情報をホワイトペーパーの内容中心にまとめた記事です。",
             "url": "/ccy"
         }
     },
     
-    "articles": [
-        {
-            "title": "MANA(分散型VRプラットフォーム)とは", 
+    "articles": {
+        "mana": {
+            "title": "MANAとは", 
             "date": "2018.2.28", 
-            "src": "/ccys/ccy1",
+            "src": "/ccys/mana",
+            "pair": "mana",
             "meta": {
-                "title": "MARON crypto currency blog | MANA(分散型VRプラットフォーム)とは",
-                "description": "分散型VRプラットフォームのMANAについて説明します。",
-                "url": "/ccy/1"
+                "title": "まろん仮想通貨ブログ | MANA(分散型VRプラットフォーム)とは",
+                "description": "分散型VRプラットフォーム\"decentraland\"のMANAトークンについて説明します。",
+                "url": "/ccy/mana"
             }
         }
-    ],
+            
+    },
 
     "articles_temp": [
         {
