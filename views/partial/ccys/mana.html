@@ -1,12 +1,24 @@
 <div class='article_wrapper'>
     <h3><%= article.title %></h3>
+
+    <p>最終更新日: 2018/3/2</p>
+    <div class='margin_bottom_50px'></div>
     
     <h2>概要</h2>
+    <div class='margin_bottom_50px'></div>
+    <img class='img_60per' src='../images/mana/top.png' alt='MANA'>
+    <div class='margin_bottom_100px'></div>
+
     <p>
-        MANAとは"Decentraland"という仮想世界で通貨として利用できるトークンです。<br>
-        "Decentraland"はVR技術を利用した、現実世界と変わらない仮想世界です。<br>
-        MANAを消費することで、"Decentraland"の土地やアバターを買ったり、仮想世界旅行を体験したりできます。<br>
-        公式の動画を見ていただくと、どんなものかわかると思います。
+        MANAとは"Decentraland"という仮想世界で通貨として利用できるトークンです。
+        "Decentraland"はVR技術を利用した、現実世界と変わらない仮想世界です。
+        "Decentraland"での取引はEthereumのブロックチェーンを利用することでトラストレスに行われます。
+        "Decentraland"には、様々なデジタルコンテンツが存在していて、MANAを消費することでデジタルコンテンツを利用できます。
+        例えば、MANAで"Decentrand"の土地を買ったり、アバターを買ったり、仮想世界旅行を体験したりできます。
+        このように"Decentraland"の経済で利用される通貨(トークン)がMANAです。
+    </p>
+    <p>
+        公式の動画を見ていただくと、"Decentraland"はどんな世界なのかわかると思います。
     </p>
 
     <div class='margin_bottom_50px'></div>
@@ -23,33 +35,25 @@
     <p>3. アーキテクチャ</p>
     <p>4. 問題点</p>
     <p>5. Decentralandの現状</p>
-    <p>6. まろーんの考え</p>
+    <p>6. 考察</p>
+    <p>7. 参考</p>
     <div class='margin_bottom_50px'></div>
 
     <p>という感じで説明していきます！</p>
-    <p>※ Decentralandの現状は近日更新予定・・・</p>
     <div class='margin_bottom_100px'></div>
     
     <h2>1. MANAの目指すところ</h2>
     <p>
-        "Decentraland"は現実と同じように様々なビジネスを展開できるような世界を目指しています。</br>
-        MANAを消費し、"Decentraland"の土地を買い、ゲームセンターやカジノを開いたり、授業を開講したりすることで収益を得られるような世界です。</br>
-        授業料としてユーザーからMANAを集めて、そのMANAでクリエーターからアバター(服)を買ったりしてもいい。
+        "Decentraland"は現実世界と変わらない仮想世界を目指しています。
+        "Decentraland"では現実と同じように様々なビジネスを展開できます。
+        MANAを消費し、"Decentraland"の土地を買い、ゲームセンターやカジノ、アバター屋を開くことができたり、
+        買った土地で授業を開講することで収益を得られます。
+        MANAの取引は、Ethereumのスマートコントラクトを利用し、ブロックチェーン上に記録されるので、安心安全に"Decentraland"を楽しむことができます。
+        スマートコントラクトは銀行等の信用できる第３者機関を通さずに安心安全な取引が可能となるため、中間搾取がなく、取引手数料が安くなります。
+        これは、デジタルコンテンツを作成するクリエーター、開発者にとって収益を生み出しやすいモデルです。
     </p>
     <p>
-        MANAを消費する取引はスマートコントラクトにて管理されるのでユーザーは安心、安全に"Decentraland"を楽しむことができます。<br>
-        スマートコントラクトを使うことで間に第３者機関を通す必要がないため、トラストレスに安い手数料で取引可能です。<br>
-        クリエーターやビジネスを展開する人にとって利益を生み出しやすい世界になるでしょう。
-    </p>
-    <p>
-        "Decentraland"でも現実と同じような大都市が生まれると考えられており、土地のレートは通常1000MANAで1LAND(仮想世界の土地単位)ですが、今後ユーザー同士の取引で変動していくと予想されます。<br>
-        今は1000MANAだった土地が10倍、100倍になる可能性があるとすると夢がありますね。
-    </p>
-    <p>
-        "Decentraland"はまだ開発途中なので、動画のような世界になるのは数年先です。<br>
-        現状は"Decentraland"に3Dオブジェクトを置く、アバター等のコンテンツの売買が可能のようです。
-    </p>
-    <p>
+        "Decentraland"はまだ開発途中なので、動画のような世界になるのは数年先(数十年かかるかも?)です。
         このようなセカンドワールド的な仮想世界"Decentraland"を作り、MANAを通貨として流通させることを目指しています。
     </p>
     <div class='margin_bottom_50px'></div>
@@ -64,8 +68,11 @@
     
     <h1>石器時代(Stone Age)</h1>
     <p>
-        まずはじめは、実験として2Dの世界をつくる。<br>
-        各土地はグリッド線で分割され、PoWアルゴリズムで土地の所有権を得られるようにする。
+        まずはじめは、実験として2Dの世界をつくる。
+        土地は格子状に分割し、PoWアルゴリズムで土地の所有権を得られるようにする。
+    </p>
+    <p>
+        ※ PoWはBitcoin等の仮想通貨で使用されているブロック承認のアルゴリズムです。
     </p>
     <div class='margin_bottom_50px'></div>
     <img class='img_100per' src='../images/mana/stone_age.png' alt='石器時代の仮想世界'>
@@ -73,13 +80,16 @@
 
     <h1>青銅器時(Bronze Age)</h1>
     <p>
-        2Dだった世界を3Dの世界にする。<br>
-        ホワイトペーパーでは土地所有者は土地にオブジェクトを置いたり、すきなように使うことができる。<br>
-        なのですが、土地にオブジェクトを置いたりできるのは次の時代へ先送りのようです。<br>
-        ユーザーは3D世界を探検できます。
+        石器時代では2Dの世界でしたが、青銅器時代では3Dの世界にアップグレードします。
+        そして、MANAを消費することで土地を購入できるようになります。
+        土地所有者はオブジェクトを置いたり、好きに土地の表示を変えられるようになります。
+        また、ユーザーは3Dの世界を探検できます。
     </p>
     <p>
-        やっと、この時代から仮想世界感がでてきます。
+        その予定だったのですが、土地にオブジェクトを置いたりできるのは次の時代へ先送りのようです。
+    </p>
+    <p>
+        やっと、この時代から"Decentraland"の土地購入、冒険が可能になる仮想世界感がでてきます。
     </p>
     <div class='margin_bottom_50px'></div>
     <img class='img_100per' src='../images/mana/bronze_age.png' alt='青銅器時代の仮想世界'>
@@ -87,22 +97,22 @@
 
     <h1>鉄器時代(Iron Age)</h1>
     <p>
-        まず先送りにされた、土地にオブジェクトを置いたりできるようになる機能追加。<br>
-        アプリを作り、他のユーザーに提供することで収益を得られる経済を作る。<br>
-        アプリは仮想世界で体験できるゲームやプラネタリウム等のようなものです。<br>
-        アバターを変えることもできるようになります。<br>
-        アバタの服とかだけでなく、声動きも。
+        まずは青銅器時代でできる予定だった、土地にオブジェクトを置いたりできるようになる機能を追加します。
+        デジタルコンテンツを作り、他のユーザーに提供することで収益を得られる仕組み(経済)を作ります。
+        デジタルコンテンツはアバター等のビジュアルコンテンツだけでなく、仮想世界で体験できるゲームやプラネタリウム等のサービスも含みます。
+        もちろん、アバターの声や動きも含まれます。
     </p>
     <p>
-        現在、beta版として鉄器時代をローンチしているみたいです。
+        現在、beta版として鉄器時代を公開しているみたいです。
     </p>
     <div class='margin_bottom_100px'></div>
 
     <h1>シリコン時代(Silicon Age)</h1>
     <p>
-        物理現象を起こせるようにするらしいです。<br>
-        物にぶつかったら、はねたりより現実らしくなります。<br>
-        動画のような世界が広がるのでしょう。
+        "Decentraland"で物理現象が起きるようにします。
+        アバターが雨に当たれば雫がはねたり、ボールを蹴れば転がったりするということです。        
+        物理現象を表現できるようになることで、より現実らしい世界が表現できます。
+        この時代がきっと動画のような世界だと思われます。
     </p>
 
     <div class='margin_bottom_50px'></div>
@@ -117,78 +127,146 @@
         ランドコンテンツ層<br>
         リアルタイム層
     </p>
+    <p>
+        最下層のコンセンサス層では"Decentraland"の土地所有権の管理、
+        中間層のランドコンテンツ層では"Decentraland"の土地表現、デジタルコンテンツの管理を、
+        最上層のリアルタイム層では"Decentraland"の仮想世界の見え方をピアツーピアによりリアルタイムに管理しています。
+    </p>
     <div class='margin_bottom_50px'></div>
     <img class='img_100per' src='../images/mana/architecture.png' alt='MANAのアーキテクチャ'>
     <div class='margin_bottom_100px'></div>
 
     <h1>コンセンサス層</h1>
     <p>
-        スマートコントラクトを使って分散台帳に土地の所有権を管理します。<br>
-        MANAを消費して、土地の所有権を得られるようになっています。<br>
-        土地は座標、所有者、土地の設定ファイルが記録されています。
+        最下層であるコンセンサス層はスマートコントラクトを使って分散台帳に土地の所有権を記録しています。
+        MANAを消費して、土地の所有権を得られるようになっています。
+        土地は座標、所有者、表現設定ファイルが記録されています。
     </p>
+    <p>※ 表現設定ファイルにプログラムを書くことで、土地のビジュアルを変えることができます。</p>
     <div class='margin_bottom_50px'></div>
     
     <h1>ランドコンテンツ層</h1>
     <p>
-        土地の設定ファイルは所有者であればダウンロードすることができます。<br>
-        土地の設定ファイルにプログラムをかくことで、土地にオブジェクトを置いたり、置いたオブジェクトを自動で動かしたりできます。
+        中間層であるランドコンテンツ層は土地に紐付いた表現設定ファイルを管理しています。
+        表現設定ファイルは土地所有者であればダウンロードすることができます。
+        表現設定ファイルにプログラムをかくことで、土地にオブジェクトを置いたり、アニメーションを追加したりできます。
     </p>
     <div class='margin_bottom_50px'></div>
     
     <h1>リアルタイム層</h1>
     <p>
-        P2P通信によって、"Decentraland"がリアルタイムで映写できるようになっています。<br>
-        また、ユーザーはボイスチャット機能等を開発でき、"Decentraland"に貢献した人は報酬をもらえます。
+        最上層であるリアルタイム層はピアツーピアで"Decentraland"の仮想世界をリアルタイムで映写できるよう管理しています。
+        また、ユーザーはリアルタイム層で動くボイスチャット機能等(デジタルコンテンツ)を開発でき、"Decentraland"に貢献した人はMANAの報酬をもらえます。
     </p>
     <div class='margin_bottom_100px'></div>
 
     <h2>4. 問題点</h2>
     <p>
-        "Decentraland"の経済を活発にするために、取引手数料を安く、早く処理できる決済システムが必要である。<br>
+        "Decentraland"の経済を活発にするために、取引手数料を安く、早く処理できる決済システムが必要である。
         どう実現するのか？
     </p>
     <p>
-        ライトニングネットワークのようなハブアンドスポーク型のシステムで近日解決するらしい。
+        オフチェーンで取引を完了させる、ライトニングネットワークのようなハブアンドスポーク型のシステムで近日解決するらしい。
     </p>
     <div class='margin_bottom_50px'></div>
     
     <p>
-        現状、土地設定ファイルやアプリが保存されている peer to peer ストレージからダウンロードする速度が遅すぎる。<br>
+        表現設定ファイルやデジタルコンテンツが保存されているピアツーピアストレージからダウンロードする速度が遅すぎる。
         どのようにして早く、そしてセキュアにダウンロードできるようにするのか？
     </p>
     <p>
-        こちらは解決方法は見つかっていないと思われます。<br>
+        こちらは解決方法は見つかっていないと思われます。
         解決策を探しながら、"Decentraland"の開発を行うのでしょう。
     </p>
     <div class='margin_bottom_50px'></div>
     
     <p>
-        ポルノやギャンブル、暴力的なコンテンツのフィルタリングは peer to peer 型プラットフォームにおいて難しい。<br>
+        ポルノやギャンブル、暴力的なコンテンツのフィルタリングはピアツーピア型プラットフォームである"Decentraland"において難しい。
         どのようにしてフィルタリングをどうようにして可能にするのか？
     </p>
     <p>
-        コンテンツをホワイトリスト、ブラックリストか判断してまとめて配信してくれるユーザーが生まれる事を期待するらしいです。
+        デジタルコンテンツをホワイトリストやブラックリストに振り分け、配信してくれるユーザーが生まれる事を期待するらしいです。
     </p>
 
     <div class='margin_bottom_100px'></div>
 
     <h2>5. Decentralandの現状</h2>
-    <p>※ 近日更新により追加予定・・・</p>
+    <h1>土地</h1>
+    <p>
+        現在、"Decentraland"の土地はオークションという形で販売しています。
+        1LAND(土地の単位)の最低価格は1000MANAで、欲しい人同士で競り落とすことで購入できます。
+        "Decentrand"の道に隣接している土地は人気で、ほとんど売り切れ状態です。
+        将来、現実と同じように大都市が生まれると考えらており、ユーザー同士の取引が可能になったとき、地域によって全然違う価値で取引されるかもしれません。
+        1000MANAで買った土地が、10倍、20倍になるかもしれないと思うと夢がありますね。
+    </p>
+    <p>
+        <a href='https://land.decentraland.org'>https://land.decentraland.org</a>で土地情報をみることができます。
+    </p>
+    <div class='margin_bottom_50px'></div>
+
+    <h1>道</h1>
+    <p>
+        道に隣接する土地はユーザーの目につきやすいため価値があがってしまうので、慎重に道を作成しています。
+        また、道はカジノやアバター屋等のデジタルコンテンツを見つけられるように見渡せるという重要な役割があり、遠くまで見渡せるように開発中です。
+    </p>
+    <div class='margin_bottom_50px'></div>
+    <img class='img_100per' src='../images/mana/road.png' alt='Decentralandの道'>
+    <div class='margin_bottom_50px'></div>
+
+    <h1>DAppsとの連携</h1>
+    <p>
+        "Decentraland"ではDApps(分散型アプリケーション)との連携を今後進めていくみたいです。
+        まず第一弾として、Etheremonが統合されます。
+        EtheremonはEthereumのブロックチェーンを利用したポケモンのようなゲームです。
+        "Decentraland"でEtheremonのモンスターが現れるようになり、"Decentraland"内で対戦や捕獲等ができるようにするらしいです。
+    </p>
+    <p>
+        Etheremon: <a href='https://www.etheremon.com/#/'>https://www.etheremon.com/#/</a>
+    </p>
+    <div class='margin_bottom_50px'></div>
+    <img class='img_100per' src='../images/mana/etheremon.jpeg' alt='etheremonと統合'>
     <div class='margin_bottom_100px'></div>
 
-    <h2>6. まろーんの考え</h2>
+    <h1>開発方法</h1>
     <p>
-        まだピンとこない人が多いかもしれないが、エンタメとしてのVRではなく生活の一部としてVRは今後浸透していくと思う。<br>
-        スマホが生まれたことで、簡単に2Dを共有できるようになった。<br>
-        インスタグラムやTwitterに夢中になる人が多いようにデジタル世界の2Dは完全に生活の一部となっている。<br>
-        次は3Dの共有が簡単にできるようになろうとしている。<br>
-        もし3Dの共有が生活に浸透したとするとどういうことが起こるだろうか?<br>
-        朝、満員電車で通勤していた生活が、VR世界のオフィスへ出勤するような生活をおくる人が出てきたり、場所代がほぼかからないことから副業でVR世界で授業を行う人が出てくるかもしれない。<br>
-        今は違和感に感じるかもしれないが、人間はなれるものである。<br>
-        2Dの共有が生活の一部になったように、3Dの共有もいつか生活の一部となるだろう。<br>
-        そこにブロックチェーンによる peer to peer で信用もデジタルに落としこむことできる<br>
-        もし、"Decentraland"が実現し、ユーザーが増えればMANAの価値は計り知れないものになるかもね 笑
+        "Decentraland"の私有地の表現設定ファイルは現状CLI(黒い画面)からのみ開発可能な状態です。
+        表現設定ファイルはa-frameというwebブラウザでVRコンテンツを作成する際によく利用されるフレームワークを採用しています。
+        また、CLIは開発者にとっては便利ですが、普通の人にとっては操作できるものではないので今後簡単に開発できる方法を追加していくらしいです。
+    </p>
+    <p>
+        CLIドキュメント: <a href='https://docs.decentraland.org/docs/command-line-interface'>https://docs.decentraland.org/docs/command-line-interface</a>
+    </p>
+    <div class='margin_bottom_50px'></div>
+    <img class='img_100per' src='../images/mana/cli.png' alt='cli'>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>6. 考察</h2>
+    <p>
+        VRはエンタメとしてではなく、生活の一部として今後浸透していくと思う。
+        スマホが生まれたことで、簡単に2Dを共有できるようになった。
+        インスタグラムやTwitterに夢中になる人が多いようにデジタル世界の2Dは完全に生活の一部となっている。
+        今後VRが普及していくことで、3Dの共有が簡単にできるようになっていく。
+        もし3Dの共有が生活に浸透したとするとどういうことが起こるだろうか?
+        朝、満員電車で通勤していた生活が、VR世界のオフィスへ出勤するような生活をおくる人が出てきたり、場所代がほぼかからないことから副業でVR世界で授業を行う人が出てくるかもしれない。
+        今は違和感に感じるかもしれないが、デジタル世界の2Dが受け入れられたようにデジタル世界の3Dも受け入れられるようになるだろう。
+        そしてデジタル世界の3Dも生活の一部となっていく。
+        そこにブロックチェーンによるピアツーピアでトラストレスな取引が可能である仮想通貨を掛けあわせることで"Decentraland"は第2の世界として広まるかもしれない。<br>
+        "Decentraland"が実現し、ユーザーが爆発的に増えればMANAの価値は計り知れないものになるかもね 笑
+    </p>
+    <div class='margin_bottom_100px'></div>
+
+    <h2>7. 参考</h2>
+    <p>
+        ホームページ<br><a href='https://decentraland.org/'>https://decentraland.org/</a>
+    </p>
+    <p>
+        ホワイトペーパー<br><a href='https://decentraland.org/whitepaper.pdf'>decentraland white paper</a>
+    </p>
+    <p>
+        decentraland medium blog<br><a href='https://blog.decentraland.org/designing-genesis-city-roads-urban-planning-ba068f08e74d'>Designing Genesis City: Roads & Urban Planning</a>
+    </p>
+    <p>
+        decentraland medium blog<br><a href='https://blog.decentraland.org/introducing-etheremon-on-decentraland-cb440fa873b4'>Introducing Etheremon on Decentraland</a>
     </p>
     <div class='margin_bottom_100px'></div>
 
@@ -198,9 +276,12 @@
     </p>
 
     <p>
+        <!--
         <a href="https://twitter.com/intent/follow?screen_name=maronBlockchain">
             Follow @maronBlockchain
         </a>
+        -->
+        <a href="https://twitter.com/maronBlockchain?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @maronBlockchain</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </p>
     <div class='margin_bottom_100px'></div>
     
