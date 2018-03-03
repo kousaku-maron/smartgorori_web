@@ -11,11 +11,11 @@
     "articles": {
         "mana": {
             "title": "MANAとは", 
-            "date": "2018.2.28", 
+            "date": "2018.3.2", 
             "src": "/ccys/mana",
             "pair": "mana",
             "meta": {
-                "title": "まろん仮想通貨ブログ | MANA(分散型VRプラットフォーム)とは",
+                "title": "まろん仮想通貨ブログ | MANAとは",
                 "description": "分散型VRプラットフォーム\"decentraland\"のMANAトークンについて説明します。",
                 "url": "/ccy/mana"
             }
