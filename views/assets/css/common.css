@@ -607,3 +607,9 @@ body {
     width: 100%;
   }
 }
+
+/* line 496, ../sass/common.scss */
+.vr_wrapper {
+  width: 100%;
+  z-index: 20;
+}

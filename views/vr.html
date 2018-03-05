@@ -1,9 +1,19 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 <div>
     <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
-    <a-scene>
-        <a-sky color="white"></a-sky>
-        <a-cube>
-            <a-animation attribute="rotation" from="0 0 0" to="0 180 0" repeat="indefinite" easing="linear"></a-animation>
-        </a-cube>
-    </a-scene>
+    <div class='vr_wrapper'>
+        <a-scene>
+            <a-sky color="white"></a-sky>
+            <a-cube>
+                <a-animation attribute="rotation" from="0 0 0" to="0 180 0" repeat="indefinite" easing="linear"></a-animation>
+            </a-cube>
+        </a-scene>
+    </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $('header').css('display','none');
+    });
+</script>
