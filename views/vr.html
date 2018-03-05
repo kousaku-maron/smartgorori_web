@@ -3,7 +3,7 @@
     
 <a-scene>
     <a-sky color="white"></a-sky>
-    <a-cube>
+    <a-cube class="hello_box">
         <a-animation attribute="rotation" from="0 0 0" to="0 180 0" repeat="indefinite" easing="linear"></a-animation>
     </a-cube>
 </a-scene>
@@ -11,5 +11,10 @@
 <script>
     $(document).ready(function(){
         $('header').css('display','none');
+        window.scrollTo(0,0);
+
+        if (window.innerHeight < window.innerWidth) {
+            alert('スマホを横にしてから、右下のレンズボタンを押してください。そうしないと画面が崩れることがあります。');
+        }
     });
 </script>
