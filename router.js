@@ -92,6 +92,11 @@ module.exports = function(app, render) {
             }
         })
 
+        .get('/vr', (ctx, next) => {
+            var meta = {title: 'VRインターフェース', url: '/vr', description: 'VRインターフェーステスト中・・・'}
+            return ctx.render('vr', {meta});
+        })
+
         .get('*', (ctx, next) => {
             var json = errorJson;
             var meta = json.meta;
