@@ -1,6 +1,5 @@
 @import 'compass';
 @import 'compass/reset';
-
 @font-face {
 	font-family: 'Perfograma';
 	src: url('../font/perfograma/Perfograma.otf');
@@ -37,12 +36,20 @@ a:visited {
     margin-bottom: 25px;
 }
 
+.margin_bottom_40px {
+    margin-bottom: 40px;
+}
+
 .margin_bottom_50px {
     margin-bottom: 50px;
 }
 
 .margin_bottom_100px {
     margin-bottom: 100px;
+}
+
+.margin_bottom_180px {
+    margin-bottom: 180px;
 }
 
 .padding_40px {
@@ -135,6 +142,20 @@ header {
     }
 }
 
+footer{ 
+    background-color: $base-color;
+	height: 35px;
+    width: 100%;
+    border-top: 1px solid;
+    border-top-color: $sub-color;
+    z-index: 10;
+
+    .twitter-follow-button {
+        margin-top: 7px;
+        margin-left: 15px;
+    }
+}
+
 // ----------------------------------------------
 
 body {
@@ -206,7 +227,7 @@ body {
                 }
 
                 .image_tile1 {
-                    background-image: url('../images/tile/vibe.jpeg');
+                    background-image: url('../images/vibe/vibe.jpeg');
                 } 
 
                 .image_tile2 {

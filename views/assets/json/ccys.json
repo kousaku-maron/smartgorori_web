@@ -19,6 +19,18 @@
                 "description": "分散型VRプラットフォーム\"decentraland\"のMANAトークンについて説明します。",
                 "url": "/ccy/mana"
             }
+        },
+
+        "vibe": {
+            "title": "VIBEとは", 
+            "date": "2018.3.5", 
+            "src": "/ccys/vibe",
+            "pair": "vibe",
+            "meta": {
+                "title": "まろん仮想通貨ブログ | VIBEとは",
+                "description": "分散型VRプラットフォーム\"VIBEHub\"のVIBEトークンについて説明します。",
+                "url": "/ccy/vibe"
+            }
         }
             
     },
