@@ -1,29 +1,30 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://aframe.io/releases/latest/aframe.min.js"></script>
-    
+<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
 <a-scene>
-    <a-sky color="white"></a-sky>
-    
-    <a-camera position="0 0 0">
-        <a-entity 
-            cursor="fuse: true; fuseTimeout: 1000" 
-            position="0 0 -1" 
-            geometry="primitive: ring" 
-            scale="0.03 0.03 0.03" 
-            material="color: blue; shader: flat">
-            
-            <a-animation
-                begin="cursor-fusing"
-                easing="ease-in"
-                attribute="scale"
-                fill="none"
-                from="0.03 0.03 0.03"
-                to="0.001 0.001 0.001">
-            </a-animation>
-        </a-entity>
-    </a-camera>
+    <a-assets>
+        <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+        <img id="totoro" src="./images/vr/totoro.png">
+    </a-assets>
 
-    <a-sphere position="0 6 -7" color="skyblue" id="sample-obj"></a-sphere>
+    <a-box src="#boxTexture" position="0 4 -5" rotation="0 45 45" scale="2 2 2">
+        <a-animation attribute="position" to="0 3.7 -5" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+        <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+    </a-box>
+
+    <a-text value="hello" color="#BBB" position="-1 7 -3" scale="1.5 1.5 1.5"></a-text>
+    <a-image src="#totoro" rotation="0 0 0" scale="4 6 3" position="5 3 -8"></a-image>
+
+    <a-entity environment="preset: forest; numDressing: 500"></a-entity>
+
+    <!--
+    <a-light type="ambient" color="#445451"></a-light>
+    <a-light type="point" intensity="2" position="2 4 4"></a-light>
+    -->
+
+    <a-camera>
+        <a-cursor color="blue" scale="2 2 2" cursor="fuse: true; fuseTimeout: 1000"></a-cursor>
+    </a-camera>
 
 </a-scene>
 
@@ -31,10 +32,5 @@
     $(document).ready(function(){
         $('header').css('display','none');
     });
-
-    var clickElement = document.getElementById("sample-obj");
-    clickElement.addEventListener("click", function() {
-        location.href = "https://thom-i.github.io/aframe/sample-030/";
-    },false);
 
 </script>
