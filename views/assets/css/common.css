@@ -544,8 +544,8 @@ body {
   }
 }
 /* line 436, ../sass/common.scss */
-.article_container .article_wrapper .accent_font {
-  color: #61A9C7;
+.article_container .article_wrapper .comment_font {
+  opacity: 0.5;
 }
 /* line 440, ../sass/common.scss */
 .article_container .article_wrapper .img_100per {
