@@ -6,6 +6,7 @@
     },
 
     "tiles": [
+        {"title": "ブロックチェーンってどうなってるの？", "date": "2018.3.7", "url": "/tech/2", "image_class": "image_tile0"},
         {"title": "VIBEとは", "date": "2018.3.5", "url": "/ccy/vibe", "image_class": "image_tile1"},
         {"title": "MANAとは", "date": "2018.3.2", "url": "/ccy/mana", "image_class": "image_tile5"},
         {"title": "Tron(trx)のコンセンサスアルゴリズム考察", "date": "2018.2.19", "url": "/article/2", "image_class": "image_tile4"},
