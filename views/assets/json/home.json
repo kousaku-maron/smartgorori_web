@@ -6,6 +6,7 @@
     },
 
     "tiles": [
+        {"title": "次世代のICOについて", "date": "2018.3.17", "url": "/article/3", "image_class": "image_tile6"},
         {"title": "ブロックチェーンってどうなってるの？", "date": "2018.3.10", "url": "/tech/2", "image_class": "image_tile0"},
         {"title": "VIBEとは", "date": "2018.3.5", "url": "/ccy/vibe", "image_class": "image_tile1"},
         {"title": "MANAとは", "date": "2018.3.2", "url": "/ccy/mana", "image_class": "image_tile5"},

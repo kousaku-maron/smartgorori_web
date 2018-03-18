@@ -247,6 +247,10 @@ body {
                     background-image: url('../images/mana/top.png');
                 }
 
+                .image_tile6 {
+                    background-image: url('../images/neo_funding/top.png');
+                }
+
                 .title {
                     box-sizing: border-box;
                     font-size: 15px;
@@ -431,6 +435,10 @@ body {
                 font-size: 15px;
                 // line-height: 20px;
             }
+        }
+
+        .sub_flow {
+            margin-left: 20px;
         }
 
         .comment_font {
