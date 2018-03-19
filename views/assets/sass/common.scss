@@ -247,6 +247,10 @@ body {
                     background-image: url('../images/mana/top.png');
                 }
 
+                .image_tile6 {
+                    background-image: url('../images/neo_funding/top.png');
+                }
+
                 .title {
                     box-sizing: border-box;
                     font-size: 15px;
@@ -433,6 +437,10 @@ body {
             }
         }
 
+        .sub_flow {
+            margin-left: 20px;
+        }
+
         .comment_font {
             opacity: 0.5;
         }
@@ -442,7 +450,9 @@ body {
         }
 
         .img_100per_white {
+            box-sizing: border-box;
             width: 100%;
+            padding: 40px;
             background-color: white;
         }
         

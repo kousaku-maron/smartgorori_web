@@ -29,6 +29,17 @@
                 "description": "Tronのgithubドキュメントのコンセンサス説明部分を解説します。",
                 "url": "/article/2"
             }
+        },
+
+        {
+            "title": "ICOのこれまでとこれから", 
+            "date": "2018.3.20", 
+            "src": "/articles/article3",
+            "meta": {
+                "title": "まろん仮想通貨ブログ | ICOのこれまでとこれから",
+                "description": "これまでのICOと、これからくるであろうDAICO、ICOプラットフォームについて解説します。",
+                "url": "/article/3"
+            }
         }
     ]
 }
