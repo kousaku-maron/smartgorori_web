@@ -14,14 +14,13 @@
     </p>
     <div class='margin_bottom_100px'></div>
 
-    <h2>話の進め方</h2>
-    <p>・introductionでの説明</p>
-    <p>
-        ・考察</br>
-        - introductionの記載事項</br>
-        - 草案</br>
-        - 最有力案解説</br>
-    </p>
+    <h2>流れ</h2>
+    <p>introductionでの説明</p>
+    <p>考察</p>
+    <p class='sub_flow'>- introductionの記載事項</p>
+    <p class='sub_flow'>- 草案</p>
+    <p class='sub_flow'>- 最有力案解説</p>
+    <p>参考</p>
     <div class='margin_bottom_100px'></div>
 
     <h2>introductionでの説明</h2>
@@ -97,8 +96,8 @@
     <p>
         ノードはブロック承認依頼の返答を行う。</br>
         proposerは2/3以上の承認返答を受け取れば次のステージへ。</br>
-        ※ 2/3以上の承認返答を受け取れなければ終わり。
     </p>
+    <p class='comment_font'>※ 2/3以上の承認返答を受け取れなければ終わり。</p>
 
     <div class='margin_bottom_50px'></div>
     <img class='img_100per' src='../images/tron/request_block_accept.png' alt='ブロック承認依頼'>
@@ -133,7 +132,7 @@
     <h1>introductionの記載事項</h1>
 
     <p>PoSアルゴリズムによりproposerが選ばれる。</p>
-    <p>※ PoSはトークン保有数・期間が多い人ほど選ばれやすい仕組み</p>
+    <p class='comment_font'>※ PoSはトークン保有数・期間が多い人ほど選ばれやすい仕組み</p>
     
     <p>
     Tronのコンセンサスアルゴリズムは3段階で進めていく。</br>
@@ -142,7 +141,7 @@
      - 3段階ではPoSとPoWの中間的なアルゴリズムをベースにする。
     </p> 
 
-    <p>
+    <p class='comment_font'>
         ※ kafkaは知らなくていいです。</br>
         ※ raftベースは"introductionでの説明"での合意プロセスなはず。</br>
         ※ PoWは複雑な計算を一番早く解けた人がブロックをはめられる仕組み。</br>
@@ -241,8 +240,8 @@
     <p>
         raftにはtermと呼ばれる論理時間が存在する。
         termにより、ノードは古いproposerか新しいproposerか判断できる。
-        ※ indexやtimeoutなどもあるが、今回は説明しない。
     </p>
+    <p class='comment_font'>※ indexやtimeoutなどもあるが、今回は説明しない。</p>
 
     <p>では続きを説明、</p>
 
